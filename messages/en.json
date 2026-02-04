@@ -1,0 +1,2037 @@
+{
+  "locale": "en",
+  "welcome": "Hey",
+  "sideLinks": {
+    "Rent": "Rent Page",
+    "Sale": "Sale Page",
+    "ChooseUs": "Why Choose Us",
+    "ShowChooseUs": "Show Cards",
+    "MarketingSteps": "Marketing Steps",
+    "ShowMarketingSteps": "Show Marketing Steps",
+    "RealEstateManagement": "Real Estate Management",
+    "AddChooseUs": "Add Card",
+    "HomeTitle": "Home Page Title",
+    "BlockedNumbers": "Blocked Numbers",
+    "ShowBlockedNumbers": "Show Blocked Numbers",
+    "AddBlockedNumber": "Add Blocked Numbers",
+
+    "Reservations": "Reservations",
+    "ShowReservation": "Show Reservation",
+    "ShowReservationHistory": "Show Reservation History",
+
+    "Inspections": "Inspection Requests",
+    "ShowInspection": "Show Requests",
+    "ShowInspectionHistory": "Show History",
+    "RealEstateCategory": "RealEstate Category",
+    "ShowRealEstateCategories": "Show RealEstate Categories",
+    "AddRealEstateCategory": "Add Category",
+    "RealEstate": "RealEstate",
+    "ShowRealEstate": "Show RealEstate",
+    "AddRealEstate": "Add RealEstate",
+    "Reviews": "Reviews",
+    "ShowReviews": "Show Reviews",
+    "AddReview": "Add Review",
+    "Banner": "Page Banner",
+    "AboutUsSection": "About Us Section",
+    "ProjectDetails": "Projects Page",
+    "ShowProjects": "Show Projects",
+    "AddProject": "Add Project",
+    "ShowServices": "Show Services",
+    "AddService": "Add Services",
+    "AccountsManagment": "Accounts Management",
+    "HomeSections": "Home Sections",
+    "Sliders": "Sliders",
+    "StatisticsSection": "Statistics",
+    "ProjectsSection": "Our Projects",
+    "Sections": "Sections",
+    "Services": "Services",
+    "Dashboard": "Dashboard",
+    "Roles": "Roles",
+    "ShowRoles": "Show Roles",
+    "CreateRole": "Create Role",
+    "Admins": "Admins",
+    "ShowAdmins": "Show Admins",
+    "AddAdmin": "Add Admin",
+    "OurProducts": "Our Products",
+    "Categories": "Categories",
+    "ShowCategories": "Show Categories",
+    "AddCategory": "Add Category",
+    "Brands": "Brands",
+    "ShowBrands": "Show Brands",
+    "AddBrand": "Add Brand",
+    "Products": "Products",
+    "ShowProducts": "Show Products",
+    "AddProduct": "Add Product",
+    "SubCategories": "Sub Categories",
+    "ShowSubCategories": "Show Sub Categories",
+    "AddSubCategory": "Add Sub Category",
+    "Providers": "Providers",
+    "ShowProviders": "Show Providers",
+    "AddProvider": "Add Provider",
+    "Orders": "Orders",
+    "Notifications": "Notifications",
+    "ShowNotifications": "Show Notifications",
+    "SendNotification": "Send Notification",
+    "Articles": "Articles",
+    "ShowArticles": "Show Articles",
+    "AddArticle": "Add Article",
+
+    "OurSupporters": "Our Partners",
+    "ShowOurSupporters": "Show Our Partners",
+    "AddSupporter": "Add Parnter",
+    "Comments": "Comments",
+    "ShowComments": "Show Comments",
+    "AddComment": "Add Comment",
+
+    "SEOManagement": "SEO Management",
+    "Home": "Home",
+    "About": "About Us",
+    "Projects": "Project Details",
+    "Job": "Jop Opportunities",
+    "Contact": "Contact Us",
+    "coupons": "Coupons",
+    "ShowCoupons": "Show Coupons",
+    "AddCoupons": "Add Coupons",
+    "Slider": "Slider",
+    "ShowSliders": "Show Sliders",
+    "AddSlider": "Add Slider",
+    "Partners": "Partners",
+    "showPartners": "Show Partners",
+    "StorePartners": "Add Partner"
+  },
+  "card": {
+    "eidt": "Edit",
+    "delete": "Delete"
+  },
+  "Services": {
+    "title": "Services",
+    "table": {
+      "image": "Image",
+      "title": "Title",
+      "Desc": "Description",
+      "action": "Action",
+      "ActionCenter": {
+        "title": "Action Center",
+        "edit": "Edit",
+        "preview": "Preview",
+        "delete": "Delete"
+      },
+      "toast": {
+        "create": "Service Created Successfully",
+        "update": "Service Updated Successfully",
+        "delete": "Service Deleted Successfully",
+        "error": "Something Went Wrong"
+      }
+    },
+    "StoreServices": {
+      "title": "Add Service",
+      "titleEn": "Title (English)",
+      "titleAr": "Title (Arabic)",
+      "descEn": "Description (English)",
+      "descAr": "Description (Arabic)",
+      "image": "Service Image",
+      "placeholders": {
+        "titleEn": "Service Title (English)",
+        "titleAr": "Service Title (Arabic)",
+        "descEn": "Service Description (English)",
+        "descAr": "Service Description (Arabic)"
+      },
+      "formErrors": {
+        "titleMinL": "Title Must Be Atleast 3 Characters",
+        "descMinL": "Description Must Be Atleast 3 Characters"
+      }
+    },
+    "EditServices": {
+      "title": "Edit Service"
+    },
+    "toast": {
+      "create": "Service Created Successfully",
+      "update": "Service Updated Successfully",
+      "delete": "Service Deleted Successfully",
+      "error": "Something Went Wrong"
+    }
+  },
+  "Projects": {
+    "title": "Projects",
+    "toast": {
+      "create": "Project Created Successfully",
+      "update": "Project Updated Successfully",
+      "delete": "Project Deleted Successfully",
+      "error": "Something Went Wrong"
+    },
+    "table": {
+      "image": "Image",
+      "title": "Title",
+      "Desc": "Description",
+      "action": "Action",
+      "status": "Status",
+      "type": "Type",
+      "ActionCenter": {
+        "title": "Action Center",
+        "edit": "Edit",
+        "preview": "Preview",
+        "delete": "Delete"
+      },
+      "toast": {
+        "create": "Project Created Successfully",
+        "update": "Project Updated Successfully",
+        "delete": "Project Deleted Successfully",
+        "error": "Something Went Wrong"
+      }
+    },
+    "StoreProjects": {
+      "image_one": "Image One",
+      "image_two": "Image Two",
+      "image_three": "Image Three",
+      "image_four": "Image Four",
+      "detailed_description_en": "Detailed Decription (English)",
+      "detailed_description_ar": "Detailed Description (Arabic)",
+      "title": "Add Project",
+      "title_en": "Title (English)",
+      "title_ar": "Title (Arabic)",
+      "description_en": "Description (English)",
+      "description_ar": "Description (Arabic)",
+      "image": "Project Image",
+      "period_ar": "Period (Arabic)",
+      "period_en": "Period (English)",
+      "typeEn": "Project Type (English)",
+      "typeAr": "Project Type (Arabic)",
+      "location_en": "Project Location (English)",
+      "location_ar": "Project Location (Arabic)",
+      "project_stages_en": "Project Stages (English)",
+      "project_stages_ar": "Project Stages (Arabic)",
+      "services_en": "Services (English)",
+      "services_ar": "Services (Arabic)",
+      "licenses_en": "Licenses (English)",
+      "licenses_ar": "Licenses (Arabic)",
+      "status": "Status",
+      "main_image": "Main Image",
+      "images": "Images",
+
+      "placeholders": {
+        "detailed_description_en": "Detailed Decription (English)",
+        "detailed_description_ar": "Detailed Decription (Arabic)",
+        "description_en": "Description (English)",
+        "description_ar": "Description (Arabic)",
+        "typeEn": "Project Type (English)",
+        "typeAr": "Project Type (Arabic)",
+        "title_en": "Project Title (English)",
+        "title_ar": "Project Title (Arabic)",
+        "desc_en": "Project Description (English)",
+        "desc_ar": "Project Description (Arabic)",
+        "period_en": "Project Period (English)",
+        "period_ar": "Project Period (Arabic)",
+        "type_en": "Project Type (English)",
+        "type_ar": "Project Type (Arabic)",
+        "location_en": "Project Location (English)",
+        "location_ar": "Project Location (Arabic)",
+        "project_stages_en": "Project Stages (English)",
+        "project_stages_ar": "Project Stages (Arabic)",
+        "services_en": "Services (English)",
+        "services_ar": "Services (Arabic)",
+        "licenses_en": "Licenses (English)",
+        "licenses_ar": "Licenses (Arabic)"
+      },
+      "formErrors": {
+        "titleMinL": "Title Must Be Atleast 3 Characters",
+        "descMinL": "Description Must Be Atleast 3 Characters"
+      }
+    },
+    "EditProjects": {
+      "title": "Edit Project",
+      "form": {
+        "labels": {
+          "title_en": "Title (English)",
+          "title_ar": "Title (Arabic)",
+          "description_en": "Description (English)",
+          "description_ar": "Description (Arabic)",
+          "period_en": "Period (English)",
+          "period_ar": "Period (Arabic)",
+          "type_en": "Type (English)",
+          "type_ar": "Type (Arabic)",
+          "location_en": "Location (English)",
+          "location_ar": "Location (Arabic)",
+          "project_stages_en": "Project Stages (English)",
+          "project_stages_ar": "Project Stages (Arabic)",
+          "services_en": "Services (English)",
+          "services_ar": "Services (Arabic)",
+          "licenses_en": "Licenses (English)",
+          "licenses_ar": "Licenses (Arabic)",
+          "status": "Status",
+          "main_image": "Main Image",
+          "images": "Gallery Images"
+        },
+        "placeholders": {
+          "detailed_description_en": "Detailed Decription (English)",
+          "detailed_description_ar": "Detailed Description (Arabic)",
+          "title_en": "Enter Title (English)",
+          "title_ar": "Enter Title (Arabic)",
+          "description_en": "Enter Description (English)",
+          "description_ar": "Enter Description (Arabic)",
+          "period_en": "Enter Period (English)",
+          "period_ar": "Enter Period (Arabic)",
+          "type_en": "Enter Type (English)",
+          "type_ar": "Enter Type (Arabic)",
+          "location_en": "Enter Location (English)",
+          "location_ar": "Enter Location (Arabic)",
+          "project_stages_en": "Enter Project Stages (English)",
+          "project_stages_ar": "Enter Project Stages (Arabic)",
+          "services_en": "Enter Services (English)",
+          "services_ar": "Enter Services (Arabic)",
+          "licenses_en": "Enter Licenses (English)",
+          "licenses_ar": "Enter Licenses (Arabic)"
+        },
+        "formErrors": {
+          "titleMinL": "Title Must Be Atleast 3 Characters",
+          "descMinL": "Description Must Be Atleast 3 Characters"
+        },
+        "submit": {
+          "update": "Update Project",
+          "loading": "Updating..."
+        }
+      }
+    },
+    "Pagination": {
+      "previous": "Previous",
+      "next": "Next",
+      "page": "Page",
+      "of": "of"
+    },
+    "Table": {
+      "loading": "Loading...",
+      "noData": "No Data Available",
+      "placeholderImage": "/images/placeholder.jpg",
+      "Type": "Type",
+      "Status": "Status"
+    }
+  },
+  "Statistics": {
+    "title": "Statistics",
+    "toast": {
+      "create": "Statistics Created Successfully",
+      "update": "Statistics Updated Successfully",
+      "delete": "Statistics Deleted Successfully",
+      "error": "Something Went Wrong"
+    },
+    "StoreStatistics": {
+      "description_en": "Description (English)",
+      "description_ar": "Description (Arabic)",
+      "title": "Add Statistics",
+      "titleOneEn": "Title  (English)",
+      "titleOneAr": "Title  (Arabic)",
+      "titleTwoEn": "Title Two (English)",
+      "titleTwoAr": "Title Two (Arabic)",
+      "titleThreeEn": "Title Three (English)",
+      "titleThreeAr": "Title Three (Arabic)",
+      "counterOne": "Happy Clients",
+      "counterTwo": "Sold Property",
+      "counterThree": "Rented Property",
+      "counterFour": "Clients Rate",
+      "placeholders": {
+        "description_en": "Enter description in English",
+        "description_ar": "Enter description in Arabic",
+        "titleOneEn": "Statistics Title  (English)",
+        "titleOneAr": "Statistics Title  (Arabic)",
+        "titleTwoEn": "Statistics Title Two (English)",
+        "titleTwoAr": "Statistics Title Two (Arabic)",
+        "titleThreeEn": "Statistics Title Three (English)",
+        "titleThreeAr": "Statistics Title Three (Arabic)",
+        "counterOne": "Happy Clients",
+        "counterTwo": "Sold Property",
+        "counterThree": "Rented Property",
+        "counterFour": "Clients Rate"
+      },
+      "formErrors": {
+        "descMinL": "Description Must Be At Least 3 Characters",
+        "titleMinL": "Title Must Be At Least 3 Characters",
+        "counterMinL": "Counter Must Be Greater Than 0"
+      }
+    },
+    "EditStatistics": {
+      "title": "Edit Statistics"
+    }
+  },
+  "ProjectsSection": {
+    "title": "Projects",
+    "toast": {
+      "create": "Project Created Successfully",
+      "update": "Project Updated Successfully",
+      "delete": "Project Deleted Successfully",
+      "error": "Something Went Wrong"
+    },
+    "StoreProjects": {
+      "title": "Add Project",
+      "titleOneEn": "Project Title (English)",
+      "titleOneAr": "Project Title (Arabic)",
+      "descriptionEn": "Project Description (English)",
+      "descriptionAr": "Project Description (Arabic)",
+      "image": "Project Image",
+      "placeholders": {
+        "detailed_description_en": "Detailed Decription (English)",
+        "detailed_description_ar": "Detailed Decription (Arabic)",
+        "titleOneEn": "Enter Project Title (English)",
+        "titleOneAr": "Enter Project Title (Arabic)",
+        "descriptionEn": "Enter Project Description (English)",
+        "descriptionAr": "Enter Project Description (Arabic)",
+        "image": "Upload Project Image"
+      },
+      "formErrors": {
+        "titleMinL": "Title Must Be At Least 3 Characters",
+        "descriptionMinL": "Description Must Be At Least 10 Characters"
+      }
+    },
+    "EditProjects": {
+      "title": "Edit Project"
+    },
+    "table": {
+      "image": "Image",
+      "action": "Action",
+      "ActionCenter": {
+        "title": "Actions",
+        "edit": "Edit",
+        "delete": "Delete"
+      }
+    }
+  },
+  "Roles": {
+    "title": "Roles",
+    "table": {
+      "title": "Name",
+      "d_name": "Display Name",
+      "Desc": "Description",
+      "permissions": "Permissions",
+      "show_permissions": "Show Permissions",
+      "action": "Action",
+      "roles": "Roles",
+      "ActionCenter": {
+        "title": "Action Center",
+        "edit": "Edit",
+        "delete": "Delete"
+      }
+    },
+    "toast": {
+      "create": "Role Created Successfully!",
+      "update": "Role Updated Successfully!",
+      "delete": "Role Deleted Successfully!",
+      "error": "Something Went Wrong!"
+    },
+    "StoreRoles": {
+      "title": "Add Role",
+      "titleEn": "Name",
+      "d_name": "Display Name (English)",
+      "d_name_ar": "Display Name (Arabic)",
+      "descEn": "Description",
+      "permissions": "Permissions",
+      "placeholders": {
+        "titleEn": "Role Name",
+        "d_name": "Role Display Name (English)",
+        "d_name_ar": "Role Display Name (Arabic)",
+        "descEn": "Role Description",
+        "permissions": "Role Permissions"
+      },
+      "formErrors": {
+        "titleMinL": "Name Must Be At Least 3 Characters",
+        "dNameMinL": "DisplayName Must Be At Least 3 Characters",
+        "descMinL": "Description Must Be At Least 3 Characters"
+      }
+    },
+    "EditRoles": {
+      "title": "Edit Role"
+    }
+  },
+  "Admins": {
+    "title": "Admins",
+    "table": {
+      "image": "Image",
+      "avatar": "Name",
+      "name": "Display Name",
+      "email": "Email",
+      "phone": "Phone",
+      "roles": "Roles",
+      "show_roles": "Show Roles",
+      "action": "Action",
+      "ActionCenter": {
+        "title": "Action Center",
+        "edit": "Edit",
+        "personalData": "Change Personal Data",
+        "changePassword": "Change Password",
+        "changeAvatar": "Change Avatar",
+        "delete": "Delete"
+      }
+    },
+    "toast": {
+      "update": "Admin Updated Successfully!",
+      "delete": "Admin Deleted Successfully!",
+      "avatar": "Admin's Avatar Changed Successfully!",
+      "password": "Admin's Passowrd Changed Successfully!",
+      "error": "Somthing Went Wrong!"
+    },
+    "StoreAdmins": {
+      "title": "Add Admin",
+      "avatar": "Image",
+      "name": "Name",
+      "email": "Email",
+      "phone": "Phone",
+      "password": "Password",
+      "password_confirmation": "Passowrd Confirmation",
+      "roles": "Roles",
+      "placeholders": {
+        "name": "Enter Name...",
+        "email": "Enter Email...",
+        "phone": "Enter Phone...",
+        "password": "Enter Password...",
+        "password_confirmation": "Enter Passowrd Confirmation...",
+        "roles": "Admin Roles"
+      },
+      "formErrors": {
+        "nameMinL": "Name Must Be Atleast 3 Characters!",
+        "phoneMinL": "Phone Must Be Atleast 10 Digits!",
+        "password": "Passwrod Must Contain Uppercase Character, Lowercase Character, Numbers And Symbols!"
+      }
+    },
+    "EditAdmins": {
+      "title": "Edit Admin"
+    }
+  },
+  "Categories": {
+    "title": "Categories",
+    "table": {
+      "image": "Image",
+      "name": "Name",
+      "desc": "Description",
+      "status": "Status",
+      "action": "Action",
+      "ActionCenter": {
+        "title": "Action Center",
+        "edit": "Edit",
+        "delete": "Delete",
+        "deleteConfirmation": {
+          "title": "Delete Category",
+          "confirm": "Are You Sure For Deleting This Category ?",
+          "deleteProducts": "Do You Wanna Delete This Category's Products ?",
+          "yes": "Yes",
+          "no": "No"
+        }
+      }
+    },
+    "toast": {
+      "update": "Category Updated Successfully!",
+      "delete": "Category Deleted Successfully!",
+      "error": "Somthing Went Wrong!"
+    },
+    "StoreCategories": {
+      "title": "Add Category",
+      "image": "Image",
+      "name_en": "Name (English)",
+      "name_ar": "Name (Arabic)",
+      "description_en": "Description (English)",
+      "description_ar": "Description (Arabic)",
+      "status": "Active",
+      "placeholders": {
+        "name_en": "Enter Your Name In English...",
+        "name_ar": "Enter Your Name In Arabic...",
+        "description_en": "Enter Description In English...",
+        "description_ar": "Enter Description In Arabic..."
+      },
+      "formErrors": {
+        "nameMinL": "Name Must Be Atleast 3 Characters!",
+        "descMinL": "Description Must Be Atleast 3 Characters!"
+      }
+    },
+    "EditCategories": {
+      "title": "Edit Category"
+    }
+  },
+  "Products": {
+    "title": "Products",
+    "table": {
+      "title": "Name",
+      "image": "Image",
+      "name": "Name",
+      "desc": "Description",
+      "category": "Category",
+      "brand": "Brand",
+      "providers": "Providers",
+      "reviews": "Reviews",
+      "stock": "Stock Quantity",
+      "status": "Status",
+      "important": "Is Important",
+      "popular": "Is Best Seller",
+      "show_providers": "Show Providers",
+      "show_reviews": "Show Reviews",
+      "action": "Action",
+      "ActionCenter": {
+        "title": "Action Center",
+        "edit": "Edit",
+        "delete": "Delete",
+        "deleteConfirmation": {
+          "title": "Delete Category",
+          "confirm": "Are You Sure For Deleting This Category ?",
+          "deleteProducts": "Do You Wanna Delete This Category's Products ?",
+          "yes": "Yes",
+          "no": "No"
+        }
+      }
+    },
+    "toast": {
+      "update": "Product Updated Successfully!",
+      "delete": "Product Deleted Successfully!",
+      "error": "Somthing Went Wrong!"
+    },
+    "StoreProducts": {
+      "selectKey": "Select Type",
+      "title": "Add Product",
+      "image": "Image",
+      "name_en": "Name (English)",
+      "name_ar": "Name (Arabic)",
+      "description_en": "Description (English)",
+      "description_ar": "Description (Arabic)",
+      "stock_quantity": "Stock Quantity",
+      "category": "Category",
+      "brand": "Brand",
+      "subcategory": "Sub Category",
+      "providers": "Providers",
+      "main_image": "Main Image",
+      "gallery": "Gallery",
+      "price": "Price",
+      "status": "Active",
+      "important": "Is Important",
+      "popular": "Is Best Seller",
+      "placeholders": {
+        "name_en": "Enter Your Name In English...",
+        "name_ar": "Enter Your Name In Arabic...",
+        "description_en": "Enter Description In English...",
+        "description_ar": "Enter Description In Arabic...",
+        "stock_quantity": "Enter Stock Amount...",
+        "enter": "Enter",
+        "price": "'s Price..."
+      },
+      "formErrors": {
+        "nameMinL": "Name Must Be Atleast 3 Characters!",
+        "descMinL": "Description Must Be Atleast 3 Characters!",
+        "priceMin": "Price Must Be Atleast 1 Unit!",
+        "stock_quantity": "Stock Quantity Must Be Atleast 1 Unit!"
+      }
+    },
+    "EditProducts": {
+      "title": "Edit Product"
+    }
+  },
+
+  "Orders": {
+    "title": "My Orders",
+    "loading-orders": "Loading Orders",
+    "statusSelect": {
+      "title": "Change Status",
+      "delivered": "Delivered",
+      "shipped": "Shipped"
+    },
+    "cancel": "Cancel",
+    "modal": {
+      "title": "Cancel Confirmation",
+      "message": "Do you want to cancel this order?",
+      "yes": "Yes",
+      "no": "No"
+    },
+    "phone": "Phone",
+    "paymentStatus": "Payment Status",
+    "paymentMethod": "Payment Method",
+    "price": "Price",
+    "address": "Address",
+    "products": "Products",
+    "status": "Status",
+    "no-contacts-available": "No orders available.",
+    "pagination": {
+      "prev": "Previous",
+      "next": "Next"
+    }
+  },
+  "Notifications": {
+    "title": "Notifications",
+    "loading-notifications": "Loading notifications",
+    "no-contacts-available": "No notifications available",
+    "table": {
+      "title": "Title",
+      "message": "Message",
+      "product": "Product",
+      "type": "Type",
+      "users": "Users",
+      "status": "Status",
+      "action": "Action",
+      "ActionCenter": {
+        "title": "Action Center",
+        "edit": "Edit",
+        "delete": "Delete"
+      }
+    },
+    "toast": {
+      "create": "Notification Created Successfully",
+      "update": "Notification Updated Successfully!",
+      "delete": "Notification Deleted Successfully!",
+      "error": "Something Went Wrong!"
+    },
+    "form": {
+      "title_en": "Notification Title (English)",
+      "title_ar": "Notification Title (Arabic)",
+      "message_en": "Notification Message (English)",
+      "message_ar": "Notification Message (Arabic)",
+      "product": "Select Product",
+      "type": "Select Type",
+      "users": "Select Users",
+      "submit": "Submit",
+      "placeholders": {
+        "title_en": "Enter Notification Title in English",
+        "title_ar": "Enter Notification Title in Arabic",
+        "message_en": "Enter Notification Message in English",
+        "message_ar": "Enter Notification Message in Arabic"
+      },
+      "formErrors": {
+        "nameMinL": "Notification title must be at least 3 characters long.",
+        "descMinL": "Notification message must be at least 3 characters long."
+      }
+    },
+    "StoreNotifications": {
+      "users": "User Notification",
+      "title": "Store Notifications",
+      "title_en": "Title in English",
+      "title_ar": "Title in Arabic",
+      "message_en": "Message in English",
+      "message_ar": "Message in Arabic",
+      "product": "Product",
+      "type": "Type",
+      "typeoptions": {
+        "general": "General Notification",
+        "user": "User Notification"
+      },
+      "placeholders": {
+        "title_en": "Enter Notification Title in English",
+        "title_ar": "Enter Notification Title in Arabic",
+        "message_en": "Enter Notification Message in English",
+        "message_ar": "Enter Notification Message in Arabic"
+      },
+      "formErrors": {
+        "nameMinL": "Title Must Be Atleast 3 Characters",
+        "descMinL": "Message must be at least 3 characters long."
+      },
+      "form": { "send": "Send Notification" }
+    },
+    "EditNotifications": {
+      "title": "Edit Notification"
+    },
+    "ShowNotifications": {
+      "title": "Show Notifications",
+      "product": "Product",
+      "type": "Type",
+      "ActionCenter": {
+        "delete": "Delete"
+      }
+    },
+    "modal": {
+      "title": "Confirm Deletion",
+      "message": "Are you sure you want to delete this notification?",
+      "no": "No",
+      "yes": "Yes"
+    },
+    "pagination": {
+      "previous": "Previous",
+      "next": "Next"
+    }
+  },
+  "userSettings": {
+    "changePass": {
+      "currentPassword": "Current Password",
+      "newPassword": "New Password",
+      "confirmPassword": "Confirm Password",
+      "passwordRequirements": "Password Requirements",
+      "cancel": "Cancel",
+      "changePassword": "Change Password",
+      "success": "Password changed successfully!",
+      "validation": {
+        "minimum": "Minimum 8 characters long - the more, the better.",
+        "lowercase": "At least one lowercase character.",
+        "symbol": "At least one number, symbol, or whitespace character.",
+        "incorrectPassword": "The current password you entered is incorrect. Please try again.",
+        "curentRequired": "Current password is required",
+        "newPassRequired": "New password is required",
+        "confirmPassRequired": "Please confirm your password",
+        "matchPass": "Passwords do not match"
+      }
+    },
+    "userPersonalDetails": {
+      "name": "Name",
+      "phone": "Phone Number",
+      "mail": "Email Address",
+      "cancel": "Cancel",
+      "save": "Save",
+      "success": "Personal Data Changed Successfully!",
+      "failed": "Something Went Wrong!",
+      "validation": {
+        "nameReq": "Name is required",
+        "nameMin": "Name must be at least 3 characters long",
+        "phoneReq": "Phone number is required",
+        "phoneMin": "Phone number must be at least 10 digits",
+        "mailReq": "Email is required",
+        "mailValid": "Enter a valid email address"
+      }
+    }
+  },
+  "Coupons": {
+    "title": "Coupons",
+    "table": {
+      "status": "Status :",
+      "type": "Type :",
+      "discountamount": "Discount Amount :",
+      "discounttype": "Discount Type :",
+      "delete": "delete"
+    },
+    "toast": {
+      "create": "Coupon Created Successfully",
+      "update": "Product Updated Successfully!",
+      "delete": "Product Deleted Successfully!",
+      "error": "Somthing Went Wrong!"
+    },
+    "StoreCoupons": {
+      "title": "Add Coupon",
+      "code": "Code",
+      "discountamount": "Discount Amount",
+      "status": "Status",
+      "type": "Type",
+      "discounttype": "Discount Type",
+      "maxuses": "Max Uses",
+      "minamount": "Min Amount",
+      "maxdiscount": "Max Discount",
+      "startsat": "Starts at",
+      "expiresat": "Expires at",
+      "submit": "submit",
+      "required": "Required field",
+      "placeholders": {
+        "entercode": "Enter Code",
+        "enterdiscountamount": "Enter Discount Amount",
+        "selectstatus": "Select Status",
+        "selectdiscounttype": "Select Discount Type",
+        "entermaxuses": "Enter Max Uses",
+        "enterminamount": "Enter Min Amount",
+        "entermaxamount": "Enter Max Amout",
+        "selectstartdate": "Select Start Date",
+        "selectenddate": "Select End Date",
+        "percentage": "percentage",
+        "fixed": "fixed",
+        "general": "General",
+        "category": "Category",
+        "subcategory": "Sub Category",
+        "provider": "provider",
+        "product": "Product",
+        "required": "Max discount is required.",
+        "startdate": "Start Date",
+        "deactivate": "deactivate",
+        "activate": "activate"
+      },
+      "formErrors": {
+        "requiredfield": "Required Field"
+      }
+    }
+  },
+  "Sliders": {
+    "title": "Sliders",
+    "table": {
+      "image": "Image",
+      "productId": "Product ID",
+      "title": "Title",
+      "Desc": "Description",
+      "status": "Status",
+      "statuses": {
+        "active": "Active",
+        "inactive": "Inactive"
+      },
+      "action": "Action",
+      "ActionCenter": {
+        "title": "Action Center",
+        "edit": "Edit",
+        "delete": "Delete"
+      }
+    },
+    "toast": {
+      "create": "Slider Created Successfully",
+      "update": "Slider Updated Successfully",
+      "delete": "Slider Deleted Successfully",
+      "error": "Something Went Wrong!"
+    },
+    "StoreSliders": {
+      "firstImage": "First Image",
+      "secondImage": "Second Image",
+      "title": "Add Slider",
+      "product_id": "Product ID",
+      "titleEn": "Title (English)",
+      "titleAr": "Title (Arabic)",
+      "descEn": "Description (English)",
+      "descAr": "Description (Arabic)",
+      "image": "Image",
+      "status": "Status",
+      "submit": "Submit",
+      "placeholders": {
+        "titleEn": "Enter title in English",
+        "titleAr": "Enter title in Arabic",
+        "descEn": "Enter description in English",
+        "descAr": "Enter description in Arabic",
+        "product_id": "Enter Product ID",
+        "image": "Upload Image"
+      },
+      "formErrors": {
+        "titleMinL": "Title must be at least 3 characters",
+        "descMinL": "Description must be at least 3 characters",
+        "productIdRequired": "Product ID is required",
+        "imageRequired": "Image is required"
+      }
+    },
+    "EditSliders": {
+      "title": "Edit Slider",
+      "product_id": "Product ID",
+      "titleEn": "Title (English)",
+      "titleAr": "Title (Arabic)",
+      "descEn": "Description (English)",
+      "descAr": "Description (Arabic)",
+      "image": "Update Image (optional)",
+      "status": "Active",
+      "submit": "Save Changes"
+    },
+    "modal": {
+      "title": "Confirm Deletion",
+      "message": "Are you sure you want to delete this slider?",
+      "no": "No",
+      "yes": "Yes"
+    }
+  },
+
+  "Brands": {
+    "title": "Brands",
+    "StoreBrands": {
+      "title": "Add Brand",
+      "titleEn": "Brand Name (English)",
+      "titleAr": "Brand Name (Arabic)",
+      "placeholders": {
+        "titleEn": "Enter brand name in English",
+        "titleAr": "Enter brand name in Arabic"
+      },
+      "formErrors": {
+        "titleMinL": "Brand name must be at least 3 characters long.",
+        "descMinL": "Brand description must be at least 3 characters long."
+      },
+      "image": "Brand Image",
+      "submit": "Submit",
+      "success": "Brand added successfully!",
+      "error": "Something went wrong!"
+    },
+    "EditBrands": {
+      "title": "Edit Brand",
+      "titleEn": "Brand Name (English)",
+      "titleAr": "Brand Name (Arabic)",
+      "placeholders": {
+        "titleEn": "Enter brand name in English",
+        "titleAr": "Enter brand name in Arabic"
+      },
+      "formErrors": {
+        "titleMinL": "Brand name must be at least 3 characters long."
+      },
+      "submit": "Save Changes"
+    },
+    "table": {
+      "image": "Image",
+      "title": "Brand Name",
+      "action": "Action",
+      "ActionCenter": {
+        "title": "Action Center",
+        "edit": "Edit",
+        "delete": "Delete"
+      }
+    },
+    "toast": {
+      "create": "Brand Created Successfully",
+      "update": "Brand Updated Successfully!",
+      "delete": "Brand Deleted Successfully!",
+      "error": "Something Went Wrong!"
+    },
+    "modal": {
+      "title": "Confirm Deletion",
+      "message": "Are you sure you want to delete this brand?",
+      "no": "No",
+      "yes": "Yes"
+    }
+  },
+  "SubCategories": {
+    "title": "Subcategories",
+    "table": {
+      "image": "Image",
+      "name": "Subcategory Name",
+      "desc": "Description",
+      "action": "Action",
+      "ActionCenter": {
+        "title": "Action Center",
+        "edit": "Edit",
+        "delete": "Delete"
+      }
+    },
+    "toast": {
+      "create": "Subcategory Created Successfully",
+      "update": "Subcategory Updated Successfully!",
+      "delete": "Subcategory Deleted Successfully!",
+      "error": "Something Went Wrong!"
+    },
+    "form": {
+      "name": "Subcategory Name",
+      "description": "Description",
+      "submit": "Submit",
+      "placeholders": {
+        "name": "Enter Subcategory Name",
+        "description": "Enter Description"
+      },
+      "formErrors": {
+        "nameRequired": "Subcategory Name is required",
+        "descriptionRequired": "Description is required"
+      }
+    },
+    "StoreSubCategories": {
+      "title": "Store Subcategories",
+      "name_en": "Subcategory Name (English)",
+      "name_ar": "Subcategory Name (Arabic)",
+      "placeholders": {
+        "name_en": "Enter subcategory name in English",
+        "name_ar": "Enter subcategory name in Arabic",
+        "description_en": "Enter subcategory description in English",
+        "description_ar": "Enter subcategory description in Arabic"
+      },
+      "description_en": "Subcategory Description (English)",
+      "description_ar": "Subcategory Description (Arabic)",
+      "formErrors": {
+        "titleMinL": "Subcategory name must be at least 3 characters long.",
+        "descMinL": "Subcategory description must be at least 3 characters long."
+      },
+      "image": "Subcategory Image"
+    },
+    "EditSubCategories": {
+      "title": "Edit Subcategory"
+    },
+    "modal": {
+      "title": "Confirm Deletion",
+      "message": "Are You Sure For Deleting This SubCategory ?",
+      "productmessage": "Do You Wanna Delete This SubCategory's Products ?",
+      "no": "No",
+      "yes": "Yes"
+    }
+  },
+  "Providers": {
+    "title": "Providers",
+    "table": {
+      "image": "Image",
+      "name": "Name",
+      "desc": "Description",
+      "action": "Action",
+      "ActionCenter": {
+        "title": "Action Center",
+        "edit": "Edit",
+        "delete": "Delete"
+      }
+    },
+    "EditProviders": {
+      "title": "Edit Provider",
+      "name_en": "Name (English)",
+      "name_ar": "Name (Arabic)",
+      "description_en": "Description (English)",
+      "description_ar": "Description (Arabic)",
+      "rating": "Rating",
+      "formErrors": {
+        "titleMinL": "The name must be at least 3 characters long.",
+        "descMinL": "The description must be at least 3 characters long.",
+        "minRating": "Rating must be at least 1.",
+        "maxRating": "Rating cannot exceed 5."
+      },
+      "placeholders": {
+        "name_en": "Enter provider name in English",
+        "name_ar": "Enter provider name in Arabic",
+        "description_en": "Enter description in English",
+        "description_ar": "Enter description in Arabic",
+        "rating": "Enter rating between 1 and 5"
+      }
+    },
+    "StoreProviders": {
+      "title": "Add Provider",
+      "name_en": "Provider Name (English)",
+      "name_ar": "Provider Name (Arabic)",
+      "description_en": "Provider Description (English)",
+      "description_ar": "Provider Description (Arabic)",
+      "rating": "Rating",
+      "image": "Image",
+      "placeholders": {
+        "name_en": "Enter the provider's English name",
+        "name_ar": "Enter the provider's Arabic name",
+        "description_en": "Enter the provider's English description",
+        "description_ar": "Enter the provider's Arabic description",
+        "rating": "Enter provider's rating",
+        "ratingvalue": "the value must to be between 1 to 5"
+      },
+      "formErrors": {
+        "titleMinL": "Provider's name must be at least 3 characters.",
+        "descMinL": "Provider's description must be at least 3 characters.",
+        "minRating": "Rating cannot be below 1.",
+        "maxRating": "Rating cannot be above 5."
+      }
+    },
+    "modal": {
+      "title": "Confirm Deletion",
+      "message": "Are you sure you want to delete this provider ?",
+      "productmessage": "Do You Wanna Delete This Provider's Products ?",
+      "no": "No",
+      "yes": "Yes"
+    },
+    "toast": {
+      "create": "Provider Created Successfully",
+      "update": "Provider Updated Successfully",
+      "delete": "Provider Deleted Succesffuly",
+      "error": "Something Went Wrong"
+    }
+  },
+  "SEO": {
+    "Projects": { "title": "Projects" },
+    "About": { "title": " About Us" },
+    "Contact": { "title": " Contact Us" },
+    "Services": { "title": "Services" },
+    "Products": { "title": "Products Page" },
+    "Rent": { "title": "Rent Page" },
+    "Sale": { "title": "Sale Page" },
+    "Home": {
+      "title": "Home",
+      "form": {
+        "toast": { "update": "SEO Data Updated Successfully" },
+        "nameEn": "Site Name (English)",
+        "nameAr": "Site Name (Arabic)",
+        "titleEn": "Title (English)",
+        "titleAr": "Title (Arabic)",
+        "descEn": "Description (English)",
+        "descAr": "Description (Arabic)",
+        "keywordsEn": "Keywords (English)",
+        "keywordsAr": "Keywords (Arabic)",
+        "image": "Open Graph Image",
+        "placeholders": {
+          "nameEn": "Enter Site Name In English...",
+          "nameAr": "Enter Site Name In Arabic...",
+          "titleEn": "Enter Title In English...",
+          "titleAr": "Enter Title In Arabic...",
+          "descEn": "Enter Description In English...",
+          "descAr": "Enter Description In Arabic...",
+          "keywordsEn": "Enter Keywords In English...",
+          "keywordsAr": "Enter Keywords In Arabic..."
+        },
+        "formErrors": {
+          "nameMinL": "Site Name Must Be Atleast 3 Characters!",
+          "titleMinL": "Title Must Be Atleast 3 Characters!",
+          "descMinL": "Description Must Be Atleast 3 Characters!",
+          "keywordsMinL": "Keywords Must Be Atleast 3 Characters!"
+        },
+        "warning": "Please ensure that your keywords are relevant to your content.",
+        "SEOEdit": "Save Changes"
+      }
+    }
+  },
+  "Settings": {
+    "title": "Settings",
+    "form": {
+      "light_logo": "Light Logo",
+      "dark_logo": "Dark Logo",
+      "primary_phone": "Primary Phone",
+      "secondary_phone": "Secondary Phone",
+
+      "site_name_en": "Website Name (English)",
+      "site_name_ar": "Website Name (Arabic)",
+      "phone": "Phone",
+      "email": "Email",
+      "address": "Address (English)",
+      "address_ar": "Address (Arabic)",
+      "facebook": "Facebook Link",
+      "instagram": "Instagram Link",
+      "linkedin": "LinkedIn Link",
+      "youtube": "Youtube Link",
+      "whatsapp": "What's App Number",
+      "x": "X Link",
+      "footer_description": "Footer Description (English)",
+      "footer_description_ar": "Footer Description (Arabic)",
+      "logo": "Main Logo",
+      "logo_mobile": "Mobile Logo",
+      "placeholders": {
+        "primary_phone": "Primary Phone",
+        "secondary_phone": "Secondary Phone",
+
+        "site_name_en": "Enter (English) Website Name...",
+        "site_name_ar": "Enter (Arabic) Website Name...",
+        "phone": "Enter Phone...",
+        "email": "Enter Email...",
+        "address": "Enter English Address...",
+        "address_ar": "Enter Arabic Address...",
+        "facebook": "Enter Facebook Link...",
+        "instagram": "Enter Instagram Link...",
+        "linkedin": "Enter linkedin Link...",
+        "youtube": "Enter youtube Link...",
+        "x": "Enter X Link...",
+        "whatsapp": "Enter What's App Number...",
+        "footer_description": "Enter English Footer Decription...",
+        "footer_description_ar": "Enter Arabic Footer Decription..."
+      }
+    },
+    "toast": {
+      "update": "Settings Updated Successfully!"
+    },
+    "errors": {
+      "site_name": "Website Name Must Be Atleast 3 Characters",
+      "email": "Email Must Be A Valid Email",
+      "footer_description": "Description Must Be Atleast 3 Characters",
+      "facebook": "Facebook Must Be A Valid Link",
+      "instagram": "Instagram Must Be A Valid Link",
+      "youtube": "Youtube Must Be A Valid Link",
+      "x": "X Must Be A Valid Link",
+      "linkedin": "LinkedIn Must Be A Valid Link",
+      "whatsapp": "What's App Must Be A Valid Phone Number",
+      "address": "Address Must Be Atleast 3 Characters"
+    },
+    "update": {
+      "title": "Edit Settings"
+    }
+  },
+  "Team": {
+    "title": "Team",
+    "toast": {
+      "create": "Member Created Successfully",
+      "update": "Member Updated Successfully",
+      "delete": "Member Deleted Successfully",
+      "error": "Something Went Wrong"
+    },
+    "StoreMember": {
+      "title": "Add Member",
+      "nameEn": "Member Name (English)",
+      "nameAr": "Member Name (Arabic)",
+      "titleEn": "Member Title (English)",
+      "titleAr": "Member Title (Arabic)",
+      "image": "Member Image",
+      "placeholders": {
+        "nameEn": "Enter Member Name (English)",
+        "nameAr": "Enter Member Name (Arabic)",
+        "titleEn": "Enter Member Title (English)",
+        "titleAr": "Enter Member Title (Arabic)",
+        "image": "Upload Member Image"
+      },
+      "formErrors": {
+        "nameMinL": "Name Must Be At Least 3 Characters",
+        "titleMinL": "Title Must Be At Least 3 Characters"
+      }
+    },
+    "EditMember": {
+      "title": "Edit Member"
+    },
+    "table": {
+      "name": "Name",
+      "title": "Title",
+      "image": "Image",
+      "action": "Action",
+      "ActionCenter": {
+        "title": "Actions",
+        "edit": "Edit",
+        "delete": "Delete"
+      }
+    }
+  },
+
+  "ContactUs": {
+    "title": "Contact Us",
+    "name": "Name",
+    "email": "Email",
+    "msg": "Message",
+    "action": "Action",
+    "delete": "Delete",
+    "loading": "Loading Contacts",
+    "contactUsMsg": {
+      "contacts": "Contact Requests",
+      "noContactsAvailable": "No contacts available",
+      "loadingContacts": "Loading contacts",
+      "confirmDelete": "Confirm Deletion",
+      "areYouSureDelete": "Are you sure you want to delete this contact?",
+      "yes": "Yes",
+      "no": "No"
+    },
+    "pagination": {
+      "previous": "Previous",
+      "next": "Next",
+      "page": "Page"
+    },
+    "toast": {
+      "create": "Contact Created Successfully",
+      "update": "Contact Updated Successfully",
+      "delete": "Contact Deleted Successfully",
+      "error": "Something Went Wrong"
+    }
+  },
+
+  "ProjectDetails": {
+    "title": "Project",
+    "toast": {
+      "create": "Project Created Successfully",
+      "update": "Project Updated Successfully",
+      "delete": "Project Deleted Successfully",
+      "error": "Something Went Wrong"
+    },
+    "form": {
+      "counterOne": "Implemented Projects",
+      "counterTwo": "Projects Under Implementation",
+      "description_en": "Project Description (English)",
+      "description_ar": "Project Description (Arabic)",
+      "placeholders": {
+        "counterOne": "Enter Implemented Projects",
+        "counterTwo": "Enter Projects Under Implementation",
+        "description_en": "Enter Project Description (English)",
+        "description_ar": "Enter Project Description (Arabic)"
+      },
+      "formErrors": {
+        "counterMinL": "Value must be at least 1",
+        "descriptionMinL": "Description must be at least 3 characters"
+      }
+    },
+    "update": {
+      "title": "Update Project"
+    },
+    "errors": {
+      "description_en": "English description must be at least 3 characters",
+      "description_ar": "Arabic description must be at least 3 characters"
+    }
+  },
+
+  "Clients": {
+    "title": "Our Clients",
+    "table": {
+      "image": "Image",
+      "title": "Name",
+      "Desc": "Description",
+      "web": "Web Link",
+      "mob": "Android Link",
+      "ios": "IOS Link",
+      "action": "Action",
+      "ActionCenter": {
+        "title": "Action Center",
+        "edit": "Edit",
+        "delete": "Delete"
+      }
+    },
+    "toast": {
+      "update": "Client Updated Successfully!",
+      "delete": "Client Deleted Successfully!"
+    },
+    "StoreClients": {
+      "title": "Add Client",
+      "titleEn": "Name (English)",
+      "titleAr": "Name (Arabic)",
+      "descEn": "Description (English)",
+      "descAr": "Description (Arabic)",
+      "client_web_link": "Web Link",
+      "client_mop_link": "Android Link",
+      "client_ios_link": "IOS Link",
+      "image": "Client Image",
+      "placeholders": {
+        "titleEn": "Client Name (English)",
+        "titleAr": "Client Name (Arabic)",
+        "descEn": "Client Description (English)",
+        "descAr": "Client Description (Arabic)",
+        "client_web_link": "Web Link",
+        "client_mop_link": "Android Link",
+        "client_ios_link": "IOS Link"
+      },
+      "formErrors": {
+        "titleMinL": "Title Must Be Atleast 3 Characters",
+        "descMinL": "Description Must Be Atleast 3 Characters",
+        "webLinkMinL": "Web Link Must Be A Valid Link",
+        "mobLinkMinL": "Android Link Must Be A Valid Link",
+        "iosLinkMinL": "IOS Link Must Be A Valid Link"
+      }
+    },
+    "EditClients": {
+      "title": "Edit Client"
+    }
+  },
+  "Supporters": {
+    "title": "Our Partners",
+    "table": {
+      "image": "Image",
+      "title": "Name",
+      "Desc": "Description",
+      "web": "Web Link",
+      "mob": "Android Link",
+      "ios": "IOS Link",
+      "action": "Action",
+      "ActionCenter": {
+        "title": "Action Center",
+        "edit": "Edit",
+        "delete": "Delete"
+      }
+    },
+    "toast": {
+      "update": "Partner Updated Successfully!",
+      "delete": "Partner Deleted Successfully!"
+    },
+    "StoreSupporters": {
+      "title": "Add Partner",
+      "titleEn": "Name (English)",
+      "titleAr": "Name (Arabic)",
+      "descEn": "Description (English)",
+      "descAr": "Description (Arabic)",
+      "client_web_link": "Web Link",
+      "client_mop_link": "Android Link",
+      "client_ios_link": "IOS Link",
+      "image": "Partner Image",
+      "placeholders": {
+        "titleEn": "Partner Name (English)",
+        "titleAr": "Partner Name (Arabic)",
+        "descEn": "Partner Description (English)",
+        "descAr": "Partner Description (Arabic)",
+        "client_web_link": "Web Link",
+        "client_mop_link": "Android Link",
+        "client_ios_link": "IOS Link"
+      },
+      "formErrors": {
+        "titleMinL": "Title Must Be Atleast 3 Characters",
+        "descMinL": "Description Must Be Atleast 3 Characters",
+        "webLinkMinL": "Web Link Must Be A Valid Link",
+        "mobLinkMinL": "Android Link Must Be A Valid Link",
+        "iosLinkMinL": "IOS Link Must Be A Valid Link"
+      }
+    },
+    "EditSupporters": {
+      "title": "Edit Partner"
+    }
+  },
+
+  "About": {
+    "title": "About Us",
+    "toast": {
+      "update": "About Section Updated Successfully",
+      "error": "Something Went Wrong"
+    },
+    "StoreAbout": {
+      "title_en": "Title (English)",
+      "title_ar": "Title (Arabic)",
+      "placeholders": {
+        "description_four": "Commercial Registration (CR)",
+        "description_five": "Tax Identification Number",
+        "title_en": "Enter the title in English",
+        "title_ar": "Enter the title in Arabic",
+        "description_en": "Enter the description in English",
+        "description_ar": "Enter the description in Arabic"
+      },
+      "formErrors": {
+        "titleMinL": "Title must be at least 3 characters long",
+        "descMinL": "Description must be at least 3 characters long"
+      }
+    },
+    "form": {
+      "description_four": "Commercial Registration (CR)",
+      "description_five": "Tax Identification Number",
+      "about_us_desc_en": "About Us Description (English)",
+      "about_us_desc_ar": "About Us Description (Arabic)",
+      "description_en": "About Description (English)",
+      "description_ar": "About Description (Arabic)",
+      "mission_en": "Mission (English)",
+      "mission_ar": "Mission (Arabic)",
+      "vision_en": "Vision (English)",
+      "vision_ar": "Vision (Arabic)",
+      "footer_description": "Footer Description",
+      "projects_desc_ar": "Projects Description (Arabic)",
+      "projects_desc_en": "Projects Description (English)",
+      "ceo_description_ar": "CAO Description (Arabic)",
+      "ceo_description_en": "CAO Description (English)",
+      "ceo_name_ar": "CAO Name (Arabic)",
+      "ceo_name_en": "CAO Name (English)",
+      "description_one_ar": "Description One (Arabic)",
+      "description_one_en": "Description One (English)",
+      "description_two_ar": "Description Two (Arabic)",
+      "description_two_en": "Description Two (English)",
+      "description_three_ar": "Description Three (Arabic)",
+      "description_three_en": "Description Three (English)",
+      "description_four_ar": "Description Four (Arabic)",
+      "description_four_en": "Description Four (English)",
+      "placeholders": {
+        "description_four": "Commercial Registration (CR)",
+        "description_five": "Tax Identification Number",
+        "about_us_desc_en": "About Us Description (English)",
+        "about_us_desc_ar": "About Us Description (Arabic)",
+        "description_en": "Enter About Description (English)",
+        "description_ar": "Enter About Description (Arabic)",
+        "mission_en": "Enter Mission (English)",
+        "mission_ar": "Enter Mission (Arabic)",
+        "vision_en": "Enter Vision (English)",
+        "vision_ar": "Enter Vision (Arabic)",
+        "projects_desc_ar": "Enter Projects Description (Arabic)",
+        "projects_desc_en": "Enter Projects Description (English)",
+        "ceo_description_ar": "Enter CAO Description (Arabic)",
+        "ceo_description_en": "Enter CAO Description (English)",
+        "ceo_name_ar": "Enter CAO Name (Arabic)",
+        "ceo_name_en": "Enter CAO Name (English)",
+        "description_one_ar": "Enter Description One (Arabic)",
+        "description_one_en": "Enter Description One (English)",
+        "description_two_ar": "Enter Description Two (Arabic)",
+        "description_two_en": "Enter Description Two (English)",
+        "description_three_ar": "Enter Description Three (Arabic)",
+        "description_three_en": "Enter Description Three (English)",
+        "description_four_ar": "Enter Description Four (Arabic)",
+        "description_four_en": "Enter Description Four (English)"
+      },
+      "formErrors": {
+        "descriptionMinL": "Description must be at least 3 characters",
+        "missionMinL": "Mission must be at least 3 characters",
+        "visionMinL": "Vision must be at least 3 characters",
+        "projects_desc_ar_minL": "Arabic projects description must be at least 3 characters",
+        "projects_desc_en_minL": "English projects description must be at least 3 characters",
+        "ceo_description_ar_minL": "Arabic CAO description must be at least 3 characters",
+        "ceo_description_en_minL": "English CAO description must be at least 3 characters",
+        "ceo_name_ar_minL": "Arabic CAO name must be at least 3 characters",
+        "ceo_name_en_minL": "English CAO name must be at least 3 characters",
+        "description_one_ar_minL": "Arabic description one must be at least 3 characters",
+        "description_one_en_minL": "English description one must be at least 3 characters",
+        "description_two_ar_minL": "Arabic description two must be at least 3 characters",
+        "description_two_en_minL": "English description two must be at least 3 characters",
+        "description_three_ar_minL": "Arabic description three must be at least 3 characters",
+        "description_three_en_minL": "English description three must be at least 3 characters",
+        "description_four_ar_minL": "Arabic description four must be at least 3 characters",
+        "description_four_en_minL": "English description four must be at least 3 characters"
+      }
+    },
+    "update": {
+      "title": "Update About Us"
+    },
+    "errors": {
+      "description_en": "English description must be at least 3 characters",
+      "description_ar": "Arabic description must be at least 3 characters",
+      "mission_en": "English mission must be at least 3 characters",
+      "mission_ar": "Arabic mission must be at least 3 characters",
+      "vision_en": "English vision must be at least 3 characters",
+      "vision_ar": "Arabic vision must be at least 3 characters",
+      "projects_desc_ar": "Arabic projects description must be at least 3 characters",
+      "projects_desc_en": "English projects description must be at least 3 characters",
+      "ceo_description_ar": "Arabic CAO description must be at least 3 characters",
+      "ceo_description_en": "English CAO description must be at least 3 characters",
+      "ceo_name_ar": "Arabic CAO name must be at least 3 characters",
+      "ceo_name_en": "English CAO name must be at least 3 characters",
+      "description_one_ar": "Arabic description one must be at least 3 characters",
+      "description_one_en": "English description one must be at least 3 characters",
+      "description_two_ar": "Arabic description two must be at least 3 characters",
+      "description_two_en": "English description two must be at least 3 characters",
+      "description_three_ar": "Arabic description three must be at least 3 characters",
+      "description_three_en": "English description three must be at least 3 characters",
+      "description_four_ar": "Arabic description four must be at least 3 characters",
+      "description_four_en": "English description four must be at least 3 characters"
+    }
+  },
+
+  "Banner": {
+    "title": "Manage Banner",
+    "StoreBanner": {
+      "about_us_title_en": "About Us Title (English)",
+      "about_us_title_ar": "About Us Title (Arabic)",
+      "contact_us_title_en": "Contact Us Title (English)",
+      "contact_us_title_ar": "Contact Us Title (Arabic)",
+      "placeholders": {
+        "about_us_title_en": "Enter About Us title in English",
+        "about_us_title_ar": "Enter About Us title in Arabic",
+        "contact_us_title_en": "Enter Contact Us title in English",
+        "contact_us_title_ar": "Enter Contact Us title in Arabic"
+      },
+      "formErrors": {
+        "titleMinL": "Title must be at least 3 characters"
+      }
+    },
+    "form": {
+      "about_us_desc_ar": "About Us Description (Arabic)",
+      "about_us_desc_en": "About Us Description (English)",
+      "contact_us_desc_ar": "Contact Us Description (Arabic)",
+      "contact_us_desc_en": "Contact Us Description (English)",
+      "placeholders": {
+        "about_us_desc_ar": "Enter About Us description in Arabic",
+        "about_us_desc_en": "Enter About Us description in English",
+        "contact_us_desc_ar": "Enter Contact Us description in Arabic",
+        "contact_us_desc_en": "Enter Contact Us description in English"
+      }
+    },
+    "errors": {
+      "about_us_desc_ar": "Description must be at least 3 characters",
+      "about_us_desc_en": "Description must be at least 3 characters",
+      "contact_us_desc_ar": "Description must be at least 3 characters",
+      "contact_us_desc_en": "Description must be at least 3 characters"
+    },
+    "update": {
+      "title": "Update Banner"
+    },
+    "toast": {
+      "update": "Banner updated successfully!"
+    }
+  },
+
+  "Reviews": {
+    "approve": "Approve",
+    "disapprove": "Disapprove",
+    "title": "Customer Reviews",
+    "toast": {
+      "error": "An error occurred. Please try again.",
+      "approved": "The review has been approved.",
+      "disapproved": "The review has been disapproved.",
+      "delete": "The review has been deleted successfully."
+    },
+    "StoreReviews": {
+      "title": "Add a Review",
+      "name_en": "Name (English)",
+      "name_ar": "Name (Arabic)",
+      "rating": "Rating",
+      "review": "Review",
+      "image": "Image",
+      "placeholders": {
+        "name_en": "Enter name in English",
+        "name_ar": "Enter name in Arabic",
+        "rating": "Enter a rating between 1 and 5",
+        "review": "Enter your review"
+      },
+      "formErrors": {
+        "name_en": "English name must be at least 3 characters",
+        "name_ar": "Arabic name must be at least 3 characters",
+        "rating": "Rating must be between 1 and 5",
+        "review": "Review must be at least 3 characters"
+      }
+    },
+    "loading-reviews": "Loading reviews",
+    "no-contacts-available": "No reviews available",
+    "modal": {
+      "title": "Confirm Deletion",
+      "message": "Are you sure you want to delete this review?",
+      "yes": "Yes",
+      "no": "No"
+    },
+    "review": "Review",
+    "delete": "Delete"
+  },
+
+  "Property": {
+    "title": "Property",
+    "options": {
+      "sale": "Sale",
+      "rent": "Rent"
+    },
+    "toast": {
+      "update": "Property updated successfully",
+      "delete": "Property deleted successfully"
+    },
+    "StoreProperty": {
+      "choose_partners": "Choose Partners",
+      "owner_name": "Owner Name",
+      "owner_phone": "Owner Phone",
+      "owner_description": "Owner Description",
+      "owner_address": "Owner Address",
+      "link": "Property Link",
+      "isinhome": "In Home ?",
+      "isavailable": "Is Available ?",
+      "title": "Store Property",
+      "title_en": "Property Title (English)",
+      "title_ar": "Property Title (Arabic)",
+      "description_en": "Property Description (English)",
+      "description_ar": "Property Description (Arabic)",
+      "price": "Price",
+      "area": "Area",
+      "selectKey": "Choose Offer Type",
+      "rooms": "Rooms",
+      "bathrooms": "Bathrooms",
+      "floor_en": "Floor (English)",
+      "floor_ar": "Floor (Arabic)",
+      "address_en": "Address (English)",
+      "address_ar": "Address (Arabic)",
+      "furnishing_en": "Furnishing (English)",
+      "furnishing_ar": "Furnishing (Arabic)",
+      "finishing_en": "Finishing (English)",
+      "finishing_ar": "Finishing (Arabic)",
+      "main_image": "Main Image",
+      "gallery": "Gallery",
+      "detailed_description_en": "Detailed Description (English)",
+      "detailed_description_ar": "Detailed Description (Arabic)",
+      "formErrors": {
+        "offerTypeRequired": "Offer Type Required",
+        "required": "Required",
+        "titleMinL": "Title must be at least 3 characters",
+        "descMinL": "Description must be at least 3 characters",
+        "productIdRequired": "Product ID is required"
+      },
+      "placeholders": {
+        "owner_name": "Enter owner name",
+        "owner_phone": "Enter owner phone",
+        "owner_description": "Enter owner description",
+        "owner_address": "Enter owner address",
+        "link": "Enter the property link",
+        "title_en": "Enter title in English",
+        "title_ar": "Enter title in Arabic",
+        "description_en": "Enter description in English",
+        "description_ar": "Enter description in Arabic",
+        "price": "Enter price",
+        "area": "Enter area",
+        "rooms": "Enter number of rooms",
+        "bathrooms": "Enter number of bathrooms",
+        "floor_en": "Enter floor in English",
+        "floor_ar": "Enter floor in Arabic",
+        "address_en": "Enter address in English",
+        "address_ar": "Enter address in Arabic",
+        "furnishing_en": "Enter furnishing details in English",
+        "furnishing_ar": "Enter furnishing details in Arabic",
+        "finishing_en": "Enter finishing details in English",
+        "finishing_ar": "Enter finishing details in Arabic",
+        "detailed_description_en": "Enter detailed description in English",
+        "detailed_description_ar": "Enter detailed description in Arabic"
+      }
+    },
+    "EditProperty": {
+      "title": "Edit Property",
+      "selectKey": "Offer Type"
+    },
+    "table": {
+      "image": "Image",
+      "title": "Title",
+      "Desc": "Description",
+      "type": "Property Type",
+      "action": "Action",
+      "ActionCenter": {
+        "title": "Actions",
+        "edit": "Edit",
+        "delete": "Delete"
+      }
+    }
+  },
+
+  "RealEstateCategory": {
+    "title": "Real Estate Categories",
+    "toast": {
+      "delete": "Category deleted successfully"
+    },
+    "EditRealEstateCategory": {
+      "title": "Edit Real Estate Category"
+    },
+    "StoreRealEstateCategory": {
+      "title": "Add Real Estate Category",
+      "titleEn": "Category Title (English)",
+      "titleAr": "Category Title (Arabic)",
+      "formErrors": {
+        "titleMinL": "Title must be at least 3 characters"
+      },
+      "placeholders": {
+        "titleEn": "Enter category title in English",
+        "titleAr": "Enter category title in Arabic"
+      }
+    },
+    "table": {
+      "title": "Title",
+      "action": "Action",
+      "ActionCenter": {
+        "title": "Actions",
+        "edit": "Edit",
+        "delete": "Delete"
+      }
+    },
+    "modal": {
+      "confirmationTitle": "Confirm Deletion",
+      "confirmationMessage": "Are you sure you want to delete this category?",
+      "cancel": "Cancel",
+      "confirm": "Confirm"
+    }
+  },
+
+  "Inspections": {
+    "propertyDetailsLink": "Property Details Link",
+    "viewDetails": "View Details",
+    "EditInspections": {
+      "title": "Inspection Details"
+    },
+
+    "phone": "Phone",
+    "address": "Address",
+    "offer_type": "Offer Type",
+    "date": "Date",
+    "time": "Time",
+    "description": "Description",
+    "requester_type": "Requester Type",
+    "status": "Status",
+    "noImagesFound": "No images found.",
+
+    "toast": {
+      "fetchError": "Failed to fetch data. Please try again.",
+      "delete": "Inspection request deleted successfully.",
+      "deleteError": "Failed to delete inspection request.",
+      "completed": "Inspection marked as completed.",
+      "cancel": "Inspection request canceled successfully."
+    },
+    "table": {
+      "date": "Date",
+      "image": "Image",
+      "title": "Title",
+      "Desc": "Description",
+      "phone": "Phone",
+      "offerType": "Offer Type",
+      "status": "Status",
+      "action": "Action",
+
+      "ActionCenter": {
+        "title": "Actions",
+        "show": "Show",
+        "markCompleted": "Mark as Completed",
+        "cancel": "Cancel",
+        "delete": "Delete"
+      }
+    },
+    "details": {
+      "phone": "Phone",
+      "address": "Address",
+      "offer_type": "Offer Type",
+      "date": "Date",
+      "time": "Time",
+      "description": "Description",
+      "requester_type": "Requester Type",
+      "status": "Status"
+    },
+    "tabs": {
+      "details": "Details",
+      "images": "Images"
+    },
+    "title": "Inspection Requests",
+    "history": "Inspection Request History",
+    "NoImages": "No images found."
+  },
+
+  "Reservations": {
+    "owner_name": "Owner Name",
+    "owner_phone": "Owner Phone",
+    "owner_description": "Owner Description",
+    "owner_address": "Owner Address",
+    "propertyMap": "Property Link",
+    "title": "Reservation Requests",
+    "history": "Reservation History",
+    "noData": "No data found",
+    "partner": "Partner",
+    "EditReservations": {
+      "title": "Edit Reservation Details"
+    },
+    "toast": {
+      "fetchError": "Failed to fetch reservations.",
+      "delete": "Reservation deleted successfully.",
+      "deleteError": "Failed to delete reservation.",
+      "completed": "Reservation marked as completed.",
+      "error": "An error occurred.",
+      "cancel": "Reservation canceled successfully."
+    },
+    "table": {
+      "Date": "Date",
+      "name": "Name",
+      "phone": "Phone",
+      "status": "Status",
+      "time": "Time",
+      "action": "Action",
+      "ActionCenter": {
+        "name": "Actions",
+        "show": "Show Details",
+        "markascompleted": "Mark as Completed",
+        "cancel": "Cancel Reservation",
+        "delete": "Delete Reservation"
+      }
+    },
+    "tabs": {
+      "details": "Details"
+    },
+    "phone": "Phone",
+    "date": "Date",
+    "time": "Time",
+    "property": "Property",
+    "status": "Status"
+  },
+
+  "BlockedNumbers": {
+    "title": "Blocked Numbers",
+    "toast": {
+      "fetchError": "Failed to fetch blocked numbers.",
+      "completed": "Number unblocked successfully.",
+      "error": "An error occurred."
+    },
+    "table": {
+      "title": "Blocked Numbers",
+      "action": "Action",
+      "ActionCenter": {
+        "name": "Actions",
+        "unblock": "Unblock Number"
+      }
+    },
+    "StoreBlockedNumbers": {
+      "title": "Add Blocked Number",
+      "placeholders": {
+        "title": "Enter phone number"
+      },
+      "formErrors": {
+        "titleMinL": "Phone number must be at least 3 characters."
+      }
+    }
+  },
+
+  "HomeTitle": {
+    "title": "Home Page Title",
+    "toast": {
+      "update": "Home Title Updated Successfully",
+      "error": "Something went wrong"
+    },
+    "StoreHomeTitle": {
+      "title_en": "Title (English)",
+      "title_ar": "Title (Arabic)",
+      "placeholders": {
+        "title_en": "Enter the title in English",
+        "title_ar": "Enter the title in Arabic",
+        "description_en": "Enter the description in English",
+        "description_ar": "Enter the description in Arabic"
+      },
+      "formErrors": {
+        "titleMinL": "Title must be at least 3 characters long",
+        "descMinL": "Description must be at least 3 characters long"
+      }
+    },
+    "form": {
+      "description_en": "Description (English)",
+      "description_ar": "Description (Arabic)"
+    },
+    "errors": {
+      "description_en": "Description must be at least 3 characters long",
+      "description_ar": "Description must be at least 3 characters long"
+    },
+    "update": {
+      "title": "Update Title"
+    }
+  },
+  "ChooseUs": {
+    "title": "Choose Us",
+    "toast": {
+      "update": "Choose Us section updated successfully.",
+      "delete": "Choose Us section deleted successfully."
+    },
+    "table": {
+      "image": "Image",
+      "title": "Title",
+      "Desc": "Description",
+      "action": "Action",
+      "ActionCenter": {
+        "title": "Action Center",
+        "edit": "Edit",
+        "delete": "Delete"
+      }
+    },
+    "EditChooseUs": {
+      "title": "Edit Choose Us"
+    },
+    "StoreChooseUs": {
+      "title": "Add Choose Us",
+      "titleEn": "Title (English)",
+      "titleAr": "Title (Arabic)",
+      "descEn": "Description (English)",
+      "descAr": "Description (Arabic)",
+      "image": "Choose Us Image",
+      "placeholders": {
+        "titleEn": "Enter title in English",
+        "titleAr": "Enter title in Arabic",
+        "descEn": "Enter description in English",
+        "descAr": "Enter description in Arabic"
+      },
+      "formErrors": {
+        "titleMinL": "Title must be at least 3 characters.",
+        "descMinL": "Description must be at least 3 characters."
+      }
+    }
+  },
+
+  "MarketingSteps": {
+    "title": "Marketing Steps",
+    "toast": {
+      "update": "Marketing Step Updated Successfully",
+      "delete": "Marketing Step Deleted Successfully",
+      "error": "Something Went Wrong"
+    },
+    "EditMarketingSteps": {
+      "title": "Edit Marketing Step"
+    },
+    "StoreMarketingSteps": {
+      "titleEn": "Title (English)",
+      "titleAr": "Title (Arabic)",
+      "descEn": "Description (English)",
+      "descAr": "Description (Arabic)",
+      "image": "Icon",
+      "placeholders": {
+        "titleEn": "Enter title in English",
+        "titleAr": "Enter title in Arabic",
+        "descEn": "Enter description in English",
+        "descAr": "Enter description in Arabic"
+      },
+      "formErrors": {
+        "titleMinL": "Title must be at least 3 characters long",
+        "descMinL": "Description must be at least 3 characters long"
+      }
+    },
+    "table": {
+      "image": "Icon",
+      "title": "Title",
+      "Desc": "Description",
+      "action": "Actions",
+      "ActionCenter": {
+        "title": "Action Center",
+        "edit": "Edit"
+      }
+    }
+  },
+  "OfferType": {
+    "rent": "Rent",
+    "sale": "Sale"
+  },
+  "Status": {
+    "pending": "Pending",
+    "completed": "Completed",
+    "cancelled": "Cancelled"
+  },
+  "Partners": {
+    "title": "Our Partners",
+    "EditPartners": "Edit Partner",
+    "StorePartners": "Add Partner",
+    "ShowPartners": "View Partners",
+    "table": {
+      "name": "Partner Name",
+      "offer": "Offer Type",
+      "link": "Partner Link",
+      "image": "Image",
+      "action": "Actions",
+      "ActionCenter": {
+        "showPartner": "View Partner",
+        "title": "Action Center",
+        "edit": "Edit",
+        "delete": "Delete"
+      }
+    },
+    "form": {
+      "name": "Partner Name",
+      "offer": "Offer Type",
+      "link": "Partner Link",
+      "image": "Image",
+      "sticker": "Sticker",
+      "placeholders": {
+        "name": "Enter partner name",
+        "offer": "Select offer type",
+        "link": "Enter partner link",
+        "image": "Choose partner image"
+      },
+      "formErrors": {
+        "name": "Partner name must be at least 3 characters",
+        "offer": "Offer type is required",
+        "image": "Partner image is required",
+        "link": "Partner link must be valid"
+      }
+    },
+    "toast": {
+      "add": "Partner added successfully",
+      "update": "Partner updated successfully",
+      "delete": "Partner deleted successfully",
+      "error": "Something went wrong"
+    }
+  }
+}
