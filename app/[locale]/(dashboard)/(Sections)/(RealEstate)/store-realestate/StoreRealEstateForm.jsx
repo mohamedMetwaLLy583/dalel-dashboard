@@ -354,6 +354,34 @@ export default function StoreRealEstateForm({ locale }) {
           />
         </div>
 
+        {/* Latitude */}
+        <div className='col-span-2 flex flex-col gap-2'>
+          <Label htmlFor='latitude'>
+            {t('Property.StoreProperty.latitude')}
+          </Label>
+          <Input
+            type='number'
+            step='any'
+            placeholder={t('Property.StoreProperty.placeholders.latitude')}
+            id='latitude'
+            {...register('latitude')}
+          />
+        </div>
+
+        {/* Longitude */}
+        <div className='col-span-2 flex flex-col gap-2'>
+          <Label htmlFor='longitude'>
+            {t('Property.StoreProperty.longitude')}
+          </Label>
+          <Input
+            type='number'
+            step='any'
+            placeholder={t('Property.StoreProperty.placeholders.longitude')}
+            id='longitude'
+            {...register('longitude')}
+          />
+        </div>
+
         {/* Property furnishing_en */}
         <div className='col-span-2 flex flex-col gap-2'>
           <Label htmlFor='furnishing_en'>

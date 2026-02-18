@@ -1630,6 +1630,8 @@
       "owner_description": "وصف المالك",
       "owner_address": "عنوان المالك",
       "link": "(يرجى وضح رابط صحيح من خرائط جوجل) عنوان العقار",
+      "latitude": "خط العرض",
+      "longitude": "خط الطول",
       "isinhome": "هل توجد في الرئيسية ؟",
       "isavailable": "هل متاح ؟",
       "title": "إضافة عقار",
@@ -1684,7 +1686,9 @@
         "finishing_en": "أدخل تفاصيل التشطيب بالإنجليزية",
         "finishing_ar": "أدخل تفاصيل التشطيب بالعربية",
         "detailed_description_en": "أدخل الوصف التفصيلي بالإنجليزية",
-        "detailed_description_ar": "أدخل الوصف التفصيلي بالعربية"
+        "detailed_description_ar": "أدخل الوصف التفصيلي بالعربية",
+        "latitude": "مثال 26.3267",
+        "longitude": "مثال 43.9717"
       }
     },
     "EditProperty": {

@@ -156,6 +156,9 @@ export const useRealEstateHook = () => {
 
     formData.append('link', values['link'] ?? '');
 
+    if (values['latitude']) formData.append('latitude', values['latitude']);
+    if (values['longitude']) formData.append('longitude', values['longitude']);
+
     formData.append('price', values['price'] ?? '');
 
     formData.append('main_image', values['main_image'][0] ?? '');
@@ -249,6 +252,9 @@ export const useRealEstateHook = () => {
     formData.append('in_home', values['in_home'] ?? '');
 
     formData.append('view_count', values['view_count'] ?? '');
+
+    if (values['latitude']) formData.append('latitude', values['latitude']);
+    if (values['longitude']) formData.append('longitude', values['longitude']);
 
     formData.append('price', values['price'] ?? '');
 

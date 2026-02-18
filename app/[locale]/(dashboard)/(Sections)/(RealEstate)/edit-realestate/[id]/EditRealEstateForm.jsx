@@ -119,6 +119,8 @@ export default function EditRealEstateForm({ locale }) {
       floor_ar: currentData?.floor_ar,
       address_ar: currentData?.address_ar,
       address_en: currentData?.address_en,
+      latitude: currentData?.latitude,
+      longitude: currentData?.longitude,
       furnishing_en: currentData?.furnishing_en,
       furnishing_ar: currentData?.furnishing_ar,
       finishing_en: currentData?.finishing_en,
@@ -413,6 +415,34 @@ export default function EditRealEstateForm({ locale }) {
             placeholder={t('Property.StoreProperty.placeholders.address_en')}
             id='address_en'
             {...register('address_en')}
+          />
+        </div>
+
+        {/* Latitude */}
+        <div className='col-span-2 flex flex-col gap-2'>
+          <Label htmlFor='latitude'>
+            {t('Property.StoreProperty.latitude')}
+          </Label>
+          <Input
+            type='number'
+            step='any'
+            placeholder={t('Property.StoreProperty.placeholders.latitude')}
+            id='latitude'
+            {...register('latitude')}
+          />
+        </div>
+
+        {/* Longitude */}
+        <div className='col-span-2 flex flex-col gap-2'>
+          <Label htmlFor='longitude'>
+            {t('Property.StoreProperty.longitude')}
+          </Label>
+          <Input
+            type='number'
+            step='any'
+            placeholder={t('Property.StoreProperty.placeholders.longitude')}
+            id='longitude'
+            {...register('longitude')}
           />
         </div>
 
