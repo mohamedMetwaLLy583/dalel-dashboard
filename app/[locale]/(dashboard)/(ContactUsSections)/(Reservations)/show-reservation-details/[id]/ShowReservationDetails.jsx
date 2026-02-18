@@ -36,7 +36,7 @@ const ShowReservationDetails = ({ locale }) => {
 
   const linkRef = `${process.env.NEXT_PUBLIC_WEBSITE_BASE_URL}/${locale}/${
     currentData?.offer_type === 'rent' ? 'for-rent' : 'for-sale'
-  }/${currentData?.id}`;
+  }/${currentData?.property_id}`;
 
   return (
     <div className='mx-auto px-4 sm:px-6 lg:px-8 mt-6 max-w-screen-2xl'>
