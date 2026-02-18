@@ -3,13 +3,14 @@ import { useRouter } from 'next/navigation';
 import { useEffect } from 'react';
 import { useState } from 'react';
 import { toast } from 'react-toastify';
+import { useToken } from "@/provider/auth.provider";
 
 export const usePartnersHook = () => {
   const [data, setData] = useState(null);
   const [currentData, setCurrentData] = useState(null);
   const [loading, setLoading] = useState(false);
   const [deletingId, setDeletingId] = useState(null);
-  const token = localStorage.getItem('token');
+  const token = useToken();
 
   const t = useTranslations();
   const locale = t('locale');
@@ -20,7 +21,7 @@ export const usePartnersHook = () => {
     setLoading(true);
     try {
       const res = await fetch(
-        `${process.env.NEXT_PUBLIC_BACKEND_BASE_URL}/api/dashboard/partner`,
+        `${(process.env.BACKEND_URL || process.env.NEXT_PUBLIC_BACKEND_BASE_URL)}/api/dashboard/partner`,
         {
           next: { revalidate: 0 },
           headers: {
@@ -38,7 +39,6 @@ export const usePartnersHook = () => {
 
       setData(data.data);
     } catch (error) {
-      console.log(error);
     } finally {
       setLoading(false);
     }
@@ -49,7 +49,7 @@ export const usePartnersHook = () => {
     setLoading(true);
     try {
       const res = await fetch(
-        `${process.env.NEXT_PUBLIC_BACKEND_BASE_URL}/api/dashboard/partner/${id}`,
+        `${(process.env.BACKEND_URL || process.env.NEXT_PUBLIC_BACKEND_BASE_URL)}/api/dashboard/partner/${id}`,
         {
           next: { revalidate: 0 },
           headers: {
@@ -67,7 +67,6 @@ export const usePartnersHook = () => {
 
       setCurrentData(data?.data);
     } catch (error) {
-      console.log(error);
     } finally {
       setLoading(false);
     }
@@ -85,7 +84,7 @@ export const usePartnersHook = () => {
     try {
       setLoading(true);
       const res = await fetch(
-        `${process.env.NEXT_PUBLIC_BACKEND_BASE_URL}/api/dashboard/partner`,
+        `${(process.env.BACKEND_URL || process.env.NEXT_PUBLIC_BACKEND_BASE_URL)}/api/dashboard/partner`,
         {
           body: formData,
           method: 'POST',
@@ -103,7 +102,6 @@ export const usePartnersHook = () => {
       router.push(`show-partners`);
       return data;
     } catch (error) {
-      console.log(error);
     } finally {
       getData(locale);
       setLoading(false);
@@ -121,7 +119,7 @@ export const usePartnersHook = () => {
     try {
       setLoading(true);
       const res = await fetch(
-        `${process.env.NEXT_PUBLIC_BACKEND_BASE_URL}/api/dashboard/partner/${id}`,
+        `${(process.env.BACKEND_URL || process.env.NEXT_PUBLIC_BACKEND_BASE_URL)}/api/dashboard/partner/${id}`,
         {
           body: formData,
           method: 'POST',
@@ -140,7 +138,6 @@ export const usePartnersHook = () => {
       const data = await res.json();
       return data;
     } catch (error) {
-      console.log(error);
     } finally {
       getData(locale);
       setLoading(false);
@@ -152,7 +149,7 @@ export const usePartnersHook = () => {
     setDeletingId(id);
     try {
       const res = await fetch(
-        `${process.env.NEXT_PUBLIC_BACKEND_BASE_URL}/api/dashboard/partner/${id}`,
+        `${(process.env.BACKEND_URL || process.env.NEXT_PUBLIC_BACKEND_BASE_URL)}/api/dashboard/partner/${id}`,
         {
           method: 'DELETE',
           headers: { authorization: `Bearer ${token}` },
@@ -167,7 +164,6 @@ export const usePartnersHook = () => {
         });
       }
     } catch (error) {
-      console.error('Deletion failed:', error);
     } finally {
       setDeletingId(null);
     }

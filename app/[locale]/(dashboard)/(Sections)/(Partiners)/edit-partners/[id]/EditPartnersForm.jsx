@@ -77,7 +77,6 @@ export default function EditPartnersForm() {
     setImagePreview(currentData?.image);
     setStickerPreview(currentData?.sticker);
   }, [currentData]);
-  console.log(currentData);
   const onSubmit = (values) => {
     EditData(id, values);
   };

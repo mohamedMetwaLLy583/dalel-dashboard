@@ -4,35 +4,32 @@ import { useEffect, useState } from "react";
 import { Icon } from "@iconify/react";
 import { signOut } from "next-auth/react";
 import { useTranslations } from "next-intl";
+import { useToken } from "@/provider/auth.provider";
 
 const LogoutFooter = () => {
   const t = useTranslations();
+  const token = useToken();
   const [profile, setProfile] = useState({ name: "", company: "" });
 
   useEffect(() => {
     const fetchProfile = async () => {
       try {
-        const token = localStorage.getItem("token");
         const response = await fetch(
           `${process.env.NEXT_PUBLIC_BACKEND_BASE_URL}/api/dashboard/profile`,
           {
             headers: {
               Authorization: `Bearer ${token}`,
-              "ngrok-skip-browser-warning": "skip-browser-warning",
             },
           }
         );
         if (response.ok) {
           const data = await response.json();
           setProfile({
-            name: data.data.name || "ACE",
-            email: data.data.email || "Da3em",
+            name: data.data.name || "",
+            email: data.data.email || "",
           });
-        } else {
-          console.error("Failed to fetch profile data");
         }
       } catch (error) {
-        console.error("Error fetching profile data", error);
       }
     };
 
@@ -51,7 +48,7 @@ const LogoutFooter = () => {
         <button
           onClick={() =>
             signOut({
-              callbackUrl: `/en/auth/login`,
+              callbackUrl: `/${t("locale")}/auth/login`,
             })
           }
           type="button"

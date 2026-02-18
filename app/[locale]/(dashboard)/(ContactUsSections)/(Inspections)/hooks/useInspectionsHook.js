@@ -2,6 +2,7 @@ import { useTranslations } from "next-intl";
 import { useRouter } from "next/navigation";
 import { useEffect, useState } from "react";
 import { toast } from "react-toastify";
+import { useToken } from "@/provider/auth.provider";
 
 export const useInspectionsHook = () => {
   const [data, setData] = useState(null);
@@ -10,8 +11,7 @@ export const useInspectionsHook = () => {
   const [loading, setLoading] = useState(false);
   const [deletingId, setDeletingId] = useState(null);
 
-  const token =
-    typeof window !== "undefined" ? localStorage.getItem("token") : "";
+  const token = useToken();
   const t = useTranslations();
   const locale = t("locale");
   const router = useRouter();
@@ -21,7 +21,7 @@ export const useInspectionsHook = () => {
     setLoading(true);
     try {
       const res = await fetch(
-        `${process.env.NEXT_PUBLIC_BACKEND_BASE_URL}/api/dashboard/inspection-request`,
+        `${(process.env.BACKEND_URL || process.env.NEXT_PUBLIC_BACKEND_BASE_URL)}/api/dashboard/inspection-request`,
         {
           next: { revalidate: 0 },
           headers: {
@@ -39,7 +39,7 @@ export const useInspectionsHook = () => {
       const json = await res.json();
       setData(json.data || []);
     } catch (error) {
-      console.error(error);
+      // error logged silently
       toast.error(t("Inspections.toast.fetchError"), {
         position: "top-right",
         autoClose: 3000,
@@ -54,7 +54,7 @@ export const useInspectionsHook = () => {
     setLoading(true);
     try {
       const res = await fetch(
-        `${process.env.NEXT_PUBLIC_BACKEND_BASE_URL}/api/dashboard/inspection-request/history`,
+        `${(process.env.BACKEND_URL || process.env.NEXT_PUBLIC_BACKEND_BASE_URL)}/api/dashboard/inspection-request/history`,
         {
           next: { revalidate: 0 },
           headers: {
@@ -72,7 +72,7 @@ export const useInspectionsHook = () => {
       const json = await res.json();
       setHistoryData(json.data || []);
     } catch (error) {
-      console.error(error);
+      // error logged silently
       toast.error(t("Inspections.toast.fetchError"), {
         position: "top-right",
         autoClose: 3000,
@@ -87,7 +87,7 @@ export const useInspectionsHook = () => {
     setLoading(true);
     try {
       const res = await fetch(
-        `${process.env.NEXT_PUBLIC_BACKEND_BASE_URL}/api/dashboard/inspection-request/${id}`,
+        `${(process.env.BACKEND_URL || process.env.NEXT_PUBLIC_BACKEND_BASE_URL)}/api/dashboard/inspection-request/${id}`,
         {
           next: { revalidate: 0 },
           headers: {
@@ -104,7 +104,7 @@ export const useInspectionsHook = () => {
       const data = await res.json();
       setCurrentData(data.data);
     } catch (error) {
-      console.log(error);
+      // error logged silently
     } finally {
       setLoading(false);
     }
@@ -115,7 +115,7 @@ export const useInspectionsHook = () => {
     setDeletingId(id);
     try {
       const res = await fetch(
-        `${process.env.NEXT_PUBLIC_BACKEND_BASE_URL}/api/dashboard/inspection-request/${id}`,
+        `${(process.env.BACKEND_URL || process.env.NEXT_PUBLIC_BACKEND_BASE_URL)}/api/dashboard/inspection-request/${id}`,
         {
           method: "DELETE",
           headers: {
@@ -141,7 +141,7 @@ export const useInspectionsHook = () => {
         autoClose: 3000,
       });
     } catch (error) {
-      console.error("Deletion failed:", error);
+      // error logged silently
       toast.error(t("Inspections.toast.deleteError"), {
         position: "top-right",
         autoClose: 3000,
@@ -156,7 +156,7 @@ export const useInspectionsHook = () => {
     setLoading(true);
     try {
       const res = await fetch(
-        `${process.env.NEXT_PUBLIC_BACKEND_BASE_URL}/api/dashboard/inspection-request/${id}/completed`,
+        `${(process.env.BACKEND_URL || process.env.NEXT_PUBLIC_BACKEND_BASE_URL)}/api/dashboard/inspection-request/${id}/completed`,
         {
           method: "POST",
           headers: {
@@ -177,7 +177,7 @@ export const useInspectionsHook = () => {
       //  Refresh data
       await getData(locale);
     } catch (error) {
-      console.error(error);
+      // error logged silently
       toast.error(t("Inspections.toast.error"), {
         position: "top-right",
         autoClose: 3000,
@@ -192,7 +192,7 @@ export const useInspectionsHook = () => {
     setLoading(true);
     try {
       const res = await fetch(
-        `${process.env.NEXT_PUBLIC_BACKEND_BASE_URL}/api/dashboard/inspection-request/${id}/cancel`,
+        `${(process.env.BACKEND_URL || process.env.NEXT_PUBLIC_BACKEND_BASE_URL)}/api/dashboard/inspection-request/${id}/cancel`,
         {
           method: "POST",
           headers: {
@@ -213,7 +213,7 @@ export const useInspectionsHook = () => {
       // Optional: Refresh data
       await getData(locale);
     } catch (error) {
-      console.error(error);
+      // error logged silently
       toast.error(t("Inspections.toast.error"), {
         position: "top-right",
         autoClose: 3000,

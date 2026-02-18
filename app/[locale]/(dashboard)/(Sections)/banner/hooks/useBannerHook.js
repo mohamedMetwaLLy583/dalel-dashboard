@@ -2,11 +2,12 @@ import { useTranslations } from "next-intl";
 import { useEffect } from "react";
 import { useState } from "react";
 import { toast } from "react-toastify";
+import { useToken } from "@/provider/auth.provider";
 
 export const useBannerHook = () => {
   const [data, setData] = useState(null);
   const [loading, setLoading] = useState(false);
-  const token = localStorage.getItem("token");
+  const token = useToken();
 
   const t = useTranslations();
 
@@ -15,7 +16,7 @@ export const useBannerHook = () => {
     setLoading(true);
     try {
       const res = await fetch(
-        `${process.env.NEXT_PUBLIC_BACKEND_BASE_URL}/api/dashboard/banner/pages`,
+        `${(process.env.BACKEND_URL || process.env.NEXT_PUBLIC_BACKEND_BASE_URL)}/api/dashboard/banner/pages`,
         {
           next: { revalidate: 0 },
           headers: {
@@ -33,7 +34,6 @@ export const useBannerHook = () => {
 
       setData(data.data);
     } catch (error) {
-      console.log(error);
     } finally {
       setLoading(false);
     }
@@ -56,7 +56,7 @@ export const useBannerHook = () => {
     try {
       setLoading(true);
       const res = await fetch(
-        `${process.env.NEXT_PUBLIC_BACKEND_BASE_URL}/api/dashboard/banner/pages`,
+        `${(process.env.BACKEND_URL || process.env.NEXT_PUBLIC_BACKEND_BASE_URL)}/api/dashboard/banner/pages`,
         {
           body: formData,
           method: "POST",
@@ -67,7 +67,6 @@ export const useBannerHook = () => {
 
       if (!res.ok) {
         if (res.status === 401) {
-          console.log("Unauthenticated");
         }
         throw new Error("Failed to fetch data");
       } else {
@@ -80,7 +79,6 @@ export const useBannerHook = () => {
       const data = await res.json();
       return data;
     } catch (error) {
-      console.log(error);
     } finally {
       getData();
       setLoading(false);

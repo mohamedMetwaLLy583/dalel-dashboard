@@ -23,7 +23,6 @@ export default function About() {
   const { data, EditData, loading } = useAboutSectionHook();
 
   const onSubmit = (values) => {
-    // console.log(values);
     EditData(values);
   };
 

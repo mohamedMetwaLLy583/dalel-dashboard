@@ -10,6 +10,7 @@ import { Eye, EyeOff } from "lucide-react";
 import { useTranslations } from "next-intl";
 import { toast, ToastContainer } from "react-toastify";
 import { useRouter } from "next/navigation";
+import { useToken } from "@/provider/auth.provider";
 import "react-toastify/dist/ReactToastify.css";
 
 const ChangePassword = () => {
@@ -18,6 +19,7 @@ const ChangePassword = () => {
   const [confirmPasswordType, setConfirmPasswordType] = useState("password");
   const t = useTranslations();
   const router = useRouter();
+  const token = useToken();
   const {
     register,
     handleSubmit,
@@ -39,15 +41,13 @@ const ChangePassword = () => {
     clearErrors();
 
     try {
-      const token = localStorage.getItem("token");
       const response = await fetch(
-        `${process.env.NEXT_PUBLIC_BACKEND_BASE_URL}/api/dashboard/change-password`,
+        `${(process.env.BACKEND_URL || process.env.NEXT_PUBLIC_BACKEND_BASE_URL)}/api/dashboard/change-password`,
         {
           method: "POST",
           headers: {
             "Content-Type": "application/json",
             Authorization: `Bearer ${token}`,
-            "ngrok-skip-browser-warning": "skip-browser-warning",
             Accept: "application/json",
           },
           body: JSON.stringify({
@@ -63,7 +63,6 @@ const ChangePassword = () => {
           position: "top-right",
           autoClose: 3000,
         });
-        // console.log("Password changed successfully");
       } else if (response.status === 400) {
         const result = await response.json();
         if (result.message === "wrong password") {
@@ -78,14 +77,9 @@ const ChangePassword = () => {
               autoClose: 3000,
             }
           );
-        } else {
-          console.error("Failed to change password:", result.message);
         }
-      } else {
-        console.error("Failed to change password");
       }
     } catch (error) {
-      console.error("Error submitting form:", error);
     }
   };
 

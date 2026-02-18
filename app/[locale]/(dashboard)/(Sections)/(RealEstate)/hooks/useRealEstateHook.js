@@ -3,6 +3,7 @@ import { useRouter, useSearchParams } from 'next/navigation';
 import { useEffect } from 'react';
 import { useState } from 'react';
 import { toast } from 'react-toastify';
+import { useToken } from "@/provider/auth.provider";
 
 export const useRealEstateHook = () => {
   const [data, setData] = useState(null);
@@ -10,7 +11,7 @@ export const useRealEstateHook = () => {
   const [currentData, setCurrentData] = useState(null);
   const [loading, setLoading] = useState(false);
   const [deletingId, setDeletingId] = useState(null);
-  const token = localStorage.getItem('token');
+  const token = useToken();
   const page = useSearchParams().get('page');
   const [selectedData, setSelectedData] = useState(null);
 
@@ -23,7 +24,7 @@ export const useRealEstateHook = () => {
     setLoading(true);
     try {
       const res = await fetch(
-        `${process.env.NEXT_PUBLIC_BACKEND_BASE_URL}/api/dashboard/property?page=${page}`,
+        `${(process.env.BACKEND_URL || process.env.NEXT_PUBLIC_BACKEND_BASE_URL)}/api/dashboard/property?page=${page}`,
         {
           next: { revalidate: 0 },
           headers: {
@@ -44,7 +45,6 @@ export const useRealEstateHook = () => {
         last_page: data.meta.last_page,
       });
     } catch (error) {
-      console.log(error);
     } finally {
       setLoading(false);
     }
@@ -55,7 +55,7 @@ export const useRealEstateHook = () => {
     setLoading(true);
     try {
       const res = await fetch(
-        `${process.env.NEXT_PUBLIC_BACKEND_BASE_URL}/api/dashboard/type`,
+        `${(process.env.BACKEND_URL || process.env.NEXT_PUBLIC_BACKEND_BASE_URL)}/api/dashboard/type`,
         {
           next: { revalidate: 0 },
           headers: {
@@ -77,7 +77,6 @@ export const useRealEstateHook = () => {
       }));
       setSelectedData(formatedData);
     } catch (error) {
-      console.log(error);
     } finally {
       setLoading(false);
     }
@@ -88,7 +87,7 @@ export const useRealEstateHook = () => {
     setLoading(true);
     try {
       const res = await fetch(
-        `${process.env.NEXT_PUBLIC_BACKEND_BASE_URL}/api/dashboard/property/${id}`,
+        `${(process.env.BACKEND_URL || process.env.NEXT_PUBLIC_BACKEND_BASE_URL)}/api/dashboard/property/${id}`,
         {
           next: { revalidate: 0 },
           headers: {
@@ -106,7 +105,6 @@ export const useRealEstateHook = () => {
 
       setCurrentData(data.data);
     } catch (error) {
-      console.log(error);
     } finally {
       setLoading(false);
     }
@@ -172,7 +170,7 @@ export const useRealEstateHook = () => {
     try {
       setLoading(true);
       const res = await fetch(
-        `${process.env.NEXT_PUBLIC_BACKEND_BASE_URL}/api/dashboard/property`,
+        `${(process.env.BACKEND_URL || process.env.NEXT_PUBLIC_BACKEND_BASE_URL)}/api/dashboard/property`,
         {
           body: formData,
           method: 'POST',
@@ -197,7 +195,6 @@ export const useRealEstateHook = () => {
       router.push(`show-realestate`);
       return data;
     } catch (error) {
-      console.log(error);
       toast.error(error.message || t('Property.toast.error'), {
         position: 'top-right',
         autoClose: 3000,
@@ -266,7 +263,7 @@ export const useRealEstateHook = () => {
     try {
       setLoading(true);
       const res = await fetch(
-        `${process.env.NEXT_PUBLIC_BACKEND_BASE_URL}/api/dashboard/property/${id}`,
+        `${(process.env.BACKEND_URL || process.env.NEXT_PUBLIC_BACKEND_BASE_URL)}/api/dashboard/property/${id}`,
         {
           body: formData,
           method: 'POST',
@@ -288,7 +285,6 @@ export const useRealEstateHook = () => {
       const data = await res.json();
       return data;
     } catch (error) {
-      console.log(error);
     } finally {
       getData(locale);
       setLoading(false);
@@ -300,7 +296,7 @@ export const useRealEstateHook = () => {
     setDeletingId(id);
     try {
       const res = await fetch(
-        `${process.env.NEXT_PUBLIC_BACKEND_BASE_URL}/api/dashboard/property/${id}`,
+        `${(process.env.BACKEND_URL || process.env.NEXT_PUBLIC_BACKEND_BASE_URL)}/api/dashboard/property/${id}`,
         {
           method: 'DELETE',
           headers: { authorization: `Bearer ${token}` },
@@ -315,7 +311,6 @@ export const useRealEstateHook = () => {
         });
       }
     } catch (error) {
-      console.error('Deletion failed:', error);
     } finally {
       setDeletingId(null);
     }

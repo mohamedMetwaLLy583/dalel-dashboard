@@ -5,6 +5,7 @@ import { useMediaQuery } from "@/hooks/use-media-query";
 import MobileFooter from "./mobile-footer";
 import FooterLayout from "./footer-layout";
 import { useMounted } from "@/hooks/use-mounted";
+import { useToken } from "@/provider/auth.provider";
 
 const Footer = ({ handleOpenSearch }) => {
   const { collapsed, sidebarType } = useSidebar();
@@ -80,29 +81,25 @@ const Footer = ({ handleOpenSearch }) => {
 export default Footer;
 
 const FooterContent = () => {
+  const token = useToken();
   const [siteName, setSiteName] = useState(null);
 
   useEffect(() => {
     const fetchSiteName = async () => {
       try {
-        const token = localStorage.getItem("token");
         const response = await fetch(
           `${process.env.NEXT_PUBLIC_BACKEND_BASE_URL}/api/dashboard/setting`,
           {
             headers: {
               Authorization: `Bearer ${token}`,
-              "ngrok-skip-browser-warning": "skip-browser-warning",
             },
           }
         );
         if (response.ok) {
           const data = await response.json();
           setSiteName(data.data.site_name_en);
-        } else {
-          console.error("Failed to fetch profile data");
         }
       } catch (error) {
-        console.error("Error fetching profile data", error);
       }
     };
 
@@ -117,10 +114,7 @@ const FooterContent = () => {
         </p>
       )}
       <p className="mb-0 text-xs md:text-sm">
-        Hand-crafted & Made by{" "}
-        <a className="text-primary" target="__blank" href="https://da3em.co">
-          Da3em
-        </a>
+        {siteName}
       </p>
     </div>
   );

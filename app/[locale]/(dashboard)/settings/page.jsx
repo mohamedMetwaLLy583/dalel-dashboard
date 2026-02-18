@@ -61,7 +61,6 @@ export default function Settings() {
   }, [dark_logo]);
 
   const onSubmit = (values) => {
-    // console.log("This is data", values);
     EditData(values);
   };
 

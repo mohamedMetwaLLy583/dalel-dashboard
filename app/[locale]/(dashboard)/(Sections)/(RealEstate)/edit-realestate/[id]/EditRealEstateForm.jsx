@@ -142,7 +142,6 @@ export default function EditRealEstateForm({ locale }) {
   }, [currentData]);
 
   const onSubmit = (values) => {
-    // console.log(status);
     EditData(id, {
       ...values,
       gallery: [...values.gallery],
@@ -668,7 +667,6 @@ export default function EditRealEstateForm({ locale }) {
                 className='react-select'
                 classNamePrefix='select'
                 onChange={(selectedOption) => {
-                  console.log('Selected Option:', selectedOption);
                   onChange(selectedOption ? selectedOption.value : null);
                   setType(selectedOption ? selectedOption.value : null);
                 }}

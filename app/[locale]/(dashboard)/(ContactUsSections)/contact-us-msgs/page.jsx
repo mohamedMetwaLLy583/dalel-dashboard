@@ -6,6 +6,7 @@ import { useTranslations } from "next-intl";
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import Modal from "react-modal";
+import { useToken } from "@/provider/auth.provider";
 
 export default function Page() {
   const [contacts, setContacts] = useState([]);
@@ -15,6 +16,7 @@ export default function Page() {
   const [selectedContact, setSelectedContact] = useState(null);
   const [isModalOpen, setIsModalOpen] = useState(false);
   const t = useTranslations();
+  const token = useToken();
 
   useEffect(() => {
     if (typeof window !== "undefined") {
@@ -26,12 +28,11 @@ export default function Page() {
   }, []);
 
   const fetchData = async (page = 1) => {
-    const token = localStorage.getItem("token");
     setLoading(true);
 
     try {
       const res = await fetch(
-        `${process.env.NEXT_PUBLIC_BACKEND_BASE_URL}/api/dashboard/contact-us?page=${page}`,
+        `${(process.env.BACKEND_URL || process.env.NEXT_PUBLIC_BACKEND_BASE_URL)}/api/dashboard/contact-us?page=${page}`,
         {
           method: "GET",
           headers: {
@@ -57,11 +58,9 @@ export default function Page() {
   };
 
   const handleDelete = async () => {
-    const token = localStorage.getItem("token");
-
     try {
       const res = await fetch(
-        `${process.env.NEXT_PUBLIC_BACKEND_BASE_URL}/api/dashboard/contact-us/${selectedContact.id}`,
+        `${(process.env.BACKEND_URL || process.env.NEXT_PUBLIC_BACKEND_BASE_URL)}/api/dashboard/contact-us/${selectedContact.id}`,
         {
           method: "DELETE",
           headers: {
@@ -78,7 +77,6 @@ export default function Page() {
         closeModal();
       }
     } catch (error) {
-      console.error("Failed to delete contact", error);
     }
   };
 

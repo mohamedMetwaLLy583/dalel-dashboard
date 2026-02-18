@@ -4,31 +4,28 @@ import { useEffect, useState } from "react";
 import { Settings } from "@/components/svg";
 import Link from "next/link";
 import { useTranslations } from "next-intl";
+import { useToken } from "@/provider/auth.provider";
 const FooterMenu = () => {
   const t = useTranslations();
+  const token = useToken();
   const [img, setImg] = useState("/images/avatar/avatar-77.jpg");
 
   useEffect(() => {
     const fetchProfile = async () => {
       try {
-        const token = localStorage.getItem("token");
         const response = await fetch(
           `${process.env.NEXT_PUBLIC_BACKEND_BASE_URL}/api/dashboard/profile`,
           {
             headers: {
               Authorization: `Bearer ${token}`,
-              "ngrok-skip-browser-warning": "skip-browser-warning",
             },
           }
         );
         if (response.ok) {
           const data = await response.json();
           setImg(data?.data?.image);
-        } else {
-          console.error("Failed to fetch profile data");
         }
       } catch (error) {
-        console.error("Error fetching profile data", error);
       }
     };
 

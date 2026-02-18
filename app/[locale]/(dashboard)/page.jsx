@@ -1,16 +1,17 @@
 "use client";
 import { useTranslations } from "next-intl";
 import React, { useEffect, useState } from "react";
+import { useToken } from "@/provider/auth.provider";
 
 const page = () => {
   const t = useTranslations();
-  const token = localStorage.getItem("token");
+  const token = useToken();
   const [userData, setUserData] = useState(null);
 
   const getUser = async () => {
     try {
       const req = await fetch(
-        `${process.env.NEXT_PUBLIC_BACKEND_BASE_URL}/api/dashboard/profile`,
+        `${(process.env.BACKEND_URL || process.env.NEXT_PUBLIC_BACKEND_BASE_URL)}/api/dashboard/profile`,
         {
           next: { revalidate: 0 },
           headers: {
@@ -23,7 +24,6 @@ const page = () => {
       const data = await req.json();
       setUserData(data.data);
     } catch (error) {
-      console.log(error);
     }
   };
 

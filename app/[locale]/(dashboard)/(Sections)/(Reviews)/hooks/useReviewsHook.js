@@ -4,12 +4,13 @@ import { useEffect } from "react";
 import { useState } from "react";
 import { toast } from "react-toastify";
 import { useSearchParams } from "next/navigation";
+import { useToken } from "@/provider/auth.provider";
 
 export const useReviewsHook = () => {
   const [data, setData] = useState([]);
   const [loading, setLoading] = useState(false);
   const [deletingId, setDeletingId] = useState(null);
-  const token = localStorage.getItem("token");
+  const token = useToken();
 
   const t = useTranslations();
   const locale = t("locale");
@@ -21,7 +22,7 @@ export const useReviewsHook = () => {
     setLoading(true);
     try {
       const res = await fetch(
-        `${process.env.NEXT_PUBLIC_BACKEND_BASE_URL}/api/dashboard/review`,
+        `${(process.env.BACKEND_URL || process.env.NEXT_PUBLIC_BACKEND_BASE_URL)}/api/dashboard/review`,
         {
           next: { revalidate: 0 },
           headers: {
@@ -63,7 +64,7 @@ export const useReviewsHook = () => {
     try {
       setLoading(true);
       const res = await fetch(
-        `${process.env.NEXT_PUBLIC_BACKEND_BASE_URL}/api/dashboard/review`,
+        `${(process.env.BACKEND_URL || process.env.NEXT_PUBLIC_BACKEND_BASE_URL)}/api/dashboard/review`,
         {
           body: formData,
           method: "POST",
@@ -98,7 +99,7 @@ export const useReviewsHook = () => {
     setLoading(true);
     try {
       const res = await fetch(
-        `${process.env.NEXT_PUBLIC_BACKEND_BASE_URL}/api/dashboard/review/${id}/toggle`,
+        `${(process.env.BACKEND_URL || process.env.NEXT_PUBLIC_BACKEND_BASE_URL)}/api/dashboard/review/${id}/toggle`,
         {
           method: "POST",
           headers: {
@@ -121,7 +122,6 @@ export const useReviewsHook = () => {
         });
       }
     } catch (error) {
-      console.error("Toggle approval failed:", error);
       toast.error(t("Reviews.toast.error"), {
         position: "top-right",
         autoClose: 3000,
@@ -136,7 +136,7 @@ export const useReviewsHook = () => {
     setDeletingId(id);
     try {
       const res = await fetch(
-        `${process.env.NEXT_PUBLIC_BACKEND_BASE_URL}/api/dashboard/review/${id}`,
+        `${(process.env.BACKEND_URL || process.env.NEXT_PUBLIC_BACKEND_BASE_URL)}/api/dashboard/review/${id}`,
         {
           method: "DELETE",
           headers: {
@@ -153,7 +153,6 @@ export const useReviewsHook = () => {
         });
       }
     } catch (error) {
-      console.error("Deletion failed:", error);
       toast.error(error, {
         position: "top-right",
         autoClose: 3000,

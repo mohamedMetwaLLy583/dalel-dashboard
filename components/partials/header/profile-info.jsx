@@ -17,30 +17,30 @@ import Link from "next/link";
 import { signOut } from "next-auth/react";
 import { useTranslations } from "next-intl";
 import { useEffect, useState } from "react";
+import { useToken } from "@/provider/auth.provider";
 
 const ProfileInfo = ({ locale }) => {
   function Logout() {
     signOut({
-      callbackUrl: `/en/auth/login`,
+      callbackUrl: `/${locale}/auth/login`,
     });
   }
 
+  const token = useToken();
   const [img, setImg] = useState("/images/avatar/avatar-77.jpg");
   const [profile, setProfile] = useState({
-    name: "ACE",
-    email: "da3em@gmail.com",
+    name: "",
+    email: "",
   });
 
   useEffect(() => {
     const fetchProfile = async () => {
       try {
-        const token = localStorage.getItem("token");
         const response = await fetch(
           `${process.env.NEXT_PUBLIC_BACKEND_BASE_URL}/api/dashboard/profile`,
           {
             headers: {
               Authorization: `Bearer ${token}`,
-              "ngrok-skip-browser-warning": "skip-browser-warning",
             },
           }
         );
@@ -51,11 +51,8 @@ const ProfileInfo = ({ locale }) => {
             name: data.data.name,
             email: data.data.email,
           });
-        } else {
-          console.error("Failed to fetch profile data");
         }
       } catch (error) {
-        console.error("Error fetching profile data", error);
       }
     };
 

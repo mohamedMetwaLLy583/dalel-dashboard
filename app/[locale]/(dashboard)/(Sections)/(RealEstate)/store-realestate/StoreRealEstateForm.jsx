@@ -85,11 +85,6 @@ export default function StoreRealEstateForm({ locale }) {
       is_available: isAvailable,
       gallery: [...values.gallery],
     });
-    // console.log({
-    //   ...values,
-    //   status: status,
-    //   gallery: [...values.gallery],
-    // });
   };
 
   return (

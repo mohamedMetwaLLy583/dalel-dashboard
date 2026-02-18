@@ -80,7 +80,6 @@ export default function EditRoleForm() {
 
   const onSubmit = (values) => {
     EditData(id, values);
-    // console.log(values);
   };
   return (
     <form onSubmit={handleSubmit(onSubmit)}>

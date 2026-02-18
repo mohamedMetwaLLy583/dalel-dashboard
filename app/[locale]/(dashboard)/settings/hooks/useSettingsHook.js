@@ -2,11 +2,12 @@ import { useTranslations } from "next-intl";
 import { useEffect } from "react";
 import { useState } from "react";
 import { toast } from "react-toastify";
+import { useToken } from "@/provider/auth.provider";
 
 export const useSettingsHook = () => {
   const [data, setData] = useState(null);
   const [loading, setLoading] = useState(false);
-  const token = localStorage.getItem("token");
+  const token = useToken();
 
   const t = useTranslations();
 
@@ -15,7 +16,7 @@ export const useSettingsHook = () => {
     setLoading(true);
     try {
       const res = await fetch(
-        `${process.env.NEXT_PUBLIC_BACKEND_BASE_URL}/api/dashboard/setting`,
+        `${(process.env.BACKEND_URL || process.env.NEXT_PUBLIC_BACKEND_BASE_URL)}/api/dashboard/setting`,
         {
           next: { revalidate: 0 },
           headers: {
@@ -32,9 +33,7 @@ export const useSettingsHook = () => {
       const data = await res.json();
 
       setData(data.data);
-      // console.log("This is get data", data.data);
     } catch (error) {
-      console.log(error);
     } finally {
       setLoading(false);
     }
@@ -68,7 +67,7 @@ export const useSettingsHook = () => {
     try {
       setLoading(true);
       const res = await fetch(
-        `${process.env.NEXT_PUBLIC_BACKEND_BASE_URL}/api/dashboard/setting`,
+        `${(process.env.BACKEND_URL || process.env.NEXT_PUBLIC_BACKEND_BASE_URL)}/api/dashboard/setting`,
         {
           body: formData,
           method: "POST",
@@ -79,7 +78,6 @@ export const useSettingsHook = () => {
 
       if (!res.ok) {
         if (res.status === 401) {
-          console.log("Unauthenticated");
         }
         throw new Error("Failed to fetch data");
       } else {
@@ -92,7 +90,6 @@ export const useSettingsHook = () => {
       const data = await res.json();
       return data;
     } catch (error) {
-      console.log(error);
     } finally {
       getData();
       setLoading(false);

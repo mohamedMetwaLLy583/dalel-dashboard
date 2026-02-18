@@ -3,13 +3,14 @@ import { useRouter } from "next/navigation";
 import { useEffect } from "react";
 import { useState } from "react";
 import { toast } from "react-toastify";
+import { useToken } from "@/provider/auth.provider";
 
 export const useRealEstateCategoryHook = () => {
   const [data, setData] = useState(null);
   const [currentData, setCurrentData] = useState(null);
   const [loading, setLoading] = useState(false);
   const [deletingId, setDeletingId] = useState(null);
-  const token = localStorage.getItem("token");
+  const token = useToken();
 
   const t = useTranslations();
   const locale = t("locale");
@@ -20,7 +21,7 @@ export const useRealEstateCategoryHook = () => {
     setLoading(true);
     try {
       const res = await fetch(
-        `${process.env.NEXT_PUBLIC_BACKEND_BASE_URL}/api/dashboard/type`,
+        `${(process.env.BACKEND_URL || process.env.NEXT_PUBLIC_BACKEND_BASE_URL)}/api/dashboard/type`,
         {
           next: { revalidate: 0 },
           headers: {
@@ -39,7 +40,6 @@ export const useRealEstateCategoryHook = () => {
 
       setData(data.data);
     } catch (error) {
-      console.log(error);
     } finally {
       setLoading(false);
     }
@@ -54,7 +54,7 @@ export const useRealEstateCategoryHook = () => {
     try {
       setLoading(true);
       const res = await fetch(
-        `${process.env.NEXT_PUBLIC_BACKEND_BASE_URL}/api/dashboard/type`,
+        `${(process.env.BACKEND_URL || process.env.NEXT_PUBLIC_BACKEND_BASE_URL)}/api/dashboard/type`,
         {
           body: formData,
           method: "POST",
@@ -74,7 +74,6 @@ export const useRealEstateCategoryHook = () => {
       router.push(`show-realestate-categories`);
       return data;
     } catch (error) {
-      console.log(error);
     } finally {
       getData(locale);
       setLoading(false);
@@ -86,7 +85,7 @@ export const useRealEstateCategoryHook = () => {
     setDeletingId(id);
     try {
       const res = await fetch(
-        `${process.env.NEXT_PUBLIC_BACKEND_BASE_URL}/api/dashboard/type/${id}`,
+        `${(process.env.BACKEND_URL || process.env.NEXT_PUBLIC_BACKEND_BASE_URL)}/api/dashboard/type/${id}`,
         {
           method: "DELETE",
           headers: { authorization: `Bearer ${token}` },
@@ -101,7 +100,6 @@ export const useRealEstateCategoryHook = () => {
         });
       }
     } catch (error) {
-      console.error("Deletion failed:", error);
     } finally {
       setDeletingId(null);
     }

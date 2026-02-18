@@ -5,21 +5,21 @@ import { Card, CardContent } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { Icon } from "@iconify/react";
+import { useToken } from "@/provider/auth.provider";
 
 const UserMeta = () => {
+  const token = useToken();
   const [avatar, setAvatar] = useState("/images/avatar/avatar-77.jpg");
   const [profile, setProfile] = useState({ name: "", role: "" });
   const [loading, setLoading] = useState(false);
 
   const fetchProfile = async () => {
     try {
-      const token = localStorage.getItem("token");
       const response = await fetch(
-        `${process.env.NEXT_PUBLIC_BACKEND_BASE_URL}/api/dashboard/profile`,
+        `${(process.env.BACKEND_URL || process.env.NEXT_PUBLIC_BACKEND_BASE_URL)}/api/dashboard/profile`,
         {
           headers: {
             Authorization: `Bearer ${token}`,
-            "ngrok-skip-browser-warning": "skip-browser-warning",
           },
         }
       );
@@ -27,7 +27,6 @@ const UserMeta = () => {
       setAvatar(data.data.image || "/images/avatar/avatar-77.jpg");
       setProfile({ name: data.data.name, email: data.data.email });
     } catch (error) {
-      console.error("Failed to fetch profile:", error);
     }
   };
 
@@ -42,26 +41,20 @@ const UserMeta = () => {
       formData.append("image", file);
       setLoading(true);
       try {
-        const token = localStorage.getItem("token");
         const response = await fetch(
-          `${process.env.NEXT_PUBLIC_BACKEND_BASE_URL}/api/dashboard/change-image`,
+          `${(process.env.BACKEND_URL || process.env.NEXT_PUBLIC_BACKEND_BASE_URL)}/api/dashboard/change-image`,
           {
             method: "POST",
             headers: {
               Authorization: `Bearer ${token}`,
-              "ngrok-skip-browser-warning": "skip-browser-warning",
             },
             body: formData,
           }
         );
         if (response.ok) {
-          // console.log("Avatar updated successfully");
           await fetchProfile();
-        } else {
-          console.error("Failed to update avatar");
         }
       } catch (error) {
-        console.error("Error uploading avatar:", error);
       } finally {
         setLoading(false);
       }

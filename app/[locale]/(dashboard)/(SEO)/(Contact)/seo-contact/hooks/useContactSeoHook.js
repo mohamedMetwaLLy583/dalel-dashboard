@@ -3,11 +3,12 @@ import { useRouter } from "next/navigation";
 import { useEffect } from "react";
 import { useState } from "react";
 import { toast } from "react-toastify";
+import { useToken } from "@/provider/auth.provider";
 
 export const useContactSeoHook = () => {
   const [data, setData] = useState(null);
   const [loading, setLoading] = useState(false);
-  const token = localStorage.getItem("token");
+  const token = useToken();
 
   const t = useTranslations();
   const locale = t("locale");
@@ -17,7 +18,7 @@ export const useContactSeoHook = () => {
     setLoading(true);
     try {
       const res = await fetch(
-        `${process.env.NEXT_PUBLIC_BACKEND_BASE_URL}/api/dashboard/seo/contact_us`,
+        `${(process.env.BACKEND_URL || process.env.NEXT_PUBLIC_BACKEND_BASE_URL)}/api/dashboard/seo/contact_us`,
         {
           next: { revalidate: 0 },
           headers: { authorization: `Bearer ${token}` },
@@ -32,7 +33,6 @@ export const useContactSeoHook = () => {
 
       setData(data);
     } catch (error) {
-      console.log(error);
     } finally {
       setLoading(false);
     }
@@ -52,7 +52,7 @@ export const useContactSeoHook = () => {
     try {
       setLoading(true);
       const res = await fetch(
-        `${process.env.NEXT_PUBLIC_BACKEND_BASE_URL}/api/dashboard/seo/contact_us`,
+        `${(process.env.BACKEND_URL || process.env.NEXT_PUBLIC_BACKEND_BASE_URL)}/api/dashboard/seo/contact_us`,
         {
           body: formData,
           method: "POST",
@@ -71,7 +71,6 @@ export const useContactSeoHook = () => {
       const data = await res.json();
       return data;
     } catch (error) {
-      console.log(error);
     } finally {
       getData(locale);
       setLoading(false);

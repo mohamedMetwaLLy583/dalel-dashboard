@@ -98,13 +98,11 @@ export default function EditAdminForm() {
         label: role.display_name,
       })),
     });
-    // console.log(currentData);
     setImagePreview(currentData?.image);
   }, [currentData]);
 
   const onSubmit = (values) => {
     EditData(id, values);
-    // console.log(values);
   };
   return (
     <form onSubmit={handleSubmit(onSubmit)}>

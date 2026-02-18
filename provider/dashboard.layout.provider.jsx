@@ -1,5 +1,5 @@
 "use client";
-import React, { useEffect } from "react";
+import React from "react";
 import Header from "@/components/partials/header";
 import Sidebar from "@/components/partials/sidebar";
 import { cn } from "@/lib/utils";
@@ -12,16 +12,14 @@ import MobileSidebar from "@/components/partials/sidebar/mobile-sidebar";
 import HeaderSearch from "@/components/header-search";
 import { useMounted } from "@/hooks/use-mounted";
 import LayoutLoader from "@/components/layout-loader";
+import AuthProvider from "@/provider/auth.provider";
+import PermissionGuard from "@/components/permission-guard";
 
 const DashBoardLayoutProvider = ({ children, locale, token, session }) => {
   const { collapsed, sidebarType, setCollapsed, subMenu } = useSidebar();
   const [open, setOpen] = React.useState(false);
   const { layout } = useThemeStore();
   const location = usePathname();
-
-  useEffect(() => {
-    localStorage.setItem("token", token);
-  }, [token]);
 
   const isMobile = useMediaQuery("(min-width: 768px)");
   const mounted = useMounted();
@@ -30,7 +28,7 @@ const DashBoardLayoutProvider = ({ children, locale, token, session }) => {
   }
   if (layout === "semibox") {
     return (
-      <>
+      <AuthProvider token={token}>
         <Header handleOpenSearch={() => setOpen(true)} trans={locale} />
         <Sidebar trans={locale} session={session} />
 
@@ -53,6 +51,7 @@ const DashBoardLayoutProvider = ({ children, locale, token, session }) => {
                 open={open}
                 location={location}
                 token={token}
+                session={session}
               >
                 {children}
               </LayoutWrapper>
@@ -60,12 +59,12 @@ const DashBoardLayoutProvider = ({ children, locale, token, session }) => {
           </div>
         </div>
         <Footer trans={locale} />
-      </>
+      </AuthProvider>
     );
   }
   if (layout === "horizontal") {
     return (
-      <>
+      <AuthProvider token={token}>
         <Header handleOpenSearch={() => setOpen(true)} trans={locale} />
 
         <div className={cn("content-wrapper transition-all duration-150 ")}>
@@ -81,19 +80,20 @@ const DashBoardLayoutProvider = ({ children, locale, token, session }) => {
               open={open}
               location={location}
               token={token}
+              session={session}
             >
               {children}
             </LayoutWrapper>
           </div>
         </div>
         <Footer />
-      </>
+      </AuthProvider>
     );
   }
 
   if (sidebarType !== "module") {
     return (
-      <>
+      <AuthProvider token={token}>
         <Header handleOpenSearch={() => setOpen(true)} trans={locale} />
         <Sidebar trans={locale} session={session} />
 
@@ -115,17 +115,18 @@ const DashBoardLayoutProvider = ({ children, locale, token, session }) => {
               open={open}
               location={location}
               token={token}
+              session={session}
             >
               {children}
             </LayoutWrapper>
           </div>
         </div>
         <Footer trans={locale} />
-      </>
+      </AuthProvider>
     );
   }
   return (
-    <>
+    <AuthProvider token={token}>
       <Header handleOpenSearch={() => setOpen(true)} trans={locale} />
       <Sidebar trans={locale} session={session} />
 
@@ -147,13 +148,14 @@ const DashBoardLayoutProvider = ({ children, locale, token, session }) => {
             open={open}
             location={location}
             token={token}
+            session={session}
           >
             {children}
           </LayoutWrapper>
         </div>
       </div>
       <Footer handleOpenSearch={() => setOpen(true)} trans={locale} />
-    </>
+    </AuthProvider>
   );
 };
 
@@ -166,6 +168,7 @@ const LayoutWrapper = ({
   open,
   location,
   token,
+  session,
 }) => {
   return (
     <>
@@ -194,7 +197,9 @@ const LayoutWrapper = ({
           duration: 0.5,
         }}
       >
-        <main>{children}</main>
+        <main>
+          <PermissionGuard session={session}>{children}</PermissionGuard>
+        </main>
       </motion.div>
 
       <MobileSidebar className="left-[300px]" />

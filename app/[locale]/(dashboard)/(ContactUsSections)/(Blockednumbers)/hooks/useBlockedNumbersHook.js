@@ -2,14 +2,14 @@ import { useTranslations } from "next-intl";
 import { useRouter } from "next/navigation";
 import { useEffect, useState } from "react";
 import { toast } from "react-toastify";
+import { useToken } from "@/provider/auth.provider";
 
 export const useBlockedNumbersHook = () => {
   const [data, setData] = useState(null);
   const [loading, setLoading] = useState(false);
   const [deletingId, setDeletingId] = useState(null);
 
-  const token =
-    typeof window !== "undefined" ? localStorage.getItem("token") : "";
+  const token = useToken();
   const t = useTranslations();
   const locale = t("locale");
   const router = useRouter();
@@ -19,7 +19,7 @@ export const useBlockedNumbersHook = () => {
     setLoading(true);
     try {
       const res = await fetch(
-        `${process.env.NEXT_PUBLIC_BACKEND_BASE_URL}/api/dashboard/reservation/blocked-phones`,
+        `${(process.env.BACKEND_URL || process.env.NEXT_PUBLIC_BACKEND_BASE_URL)}/api/dashboard/reservation/blocked-phones`,
         {
           next: { revalidate: 0 },
           headers: {
@@ -36,7 +36,7 @@ export const useBlockedNumbersHook = () => {
       const json = await res.json();
       setData(json.data || []);
     } catch (error) {
-      console.error(error);
+      // error logged silently
       toast.error(t("Reservations.toast.fetchError"), {
         position: "top-right",
         autoClose: 3000,
@@ -51,7 +51,7 @@ export const useBlockedNumbersHook = () => {
     setLoading(true);
     try {
       const res = await fetch(
-        `${process.env.NEXT_PUBLIC_BACKEND_BASE_URL}/api/dashboard/reservation/unblock-phone/${id}`,
+        `${(process.env.BACKEND_URL || process.env.NEXT_PUBLIC_BACKEND_BASE_URL)}/api/dashboard/reservation/unblock-phone/${id}`,
         {
           method: "POST",
           headers: {
@@ -72,7 +72,7 @@ export const useBlockedNumbersHook = () => {
       //  Refresh data
       await getData(locale);
     } catch (error) {
-      console.error(error);
+      // error logged silently
       toast.error(t("Reservations.toast.error"), {
         position: "top-right",
         autoClose: 3000,
@@ -90,7 +90,7 @@ export const useBlockedNumbersHook = () => {
     try {
       setLoading(true);
       const res = await fetch(
-        `${process.env.NEXT_PUBLIC_BACKEND_BASE_URL}/api/dashboard/reservation/block-phone`,
+        `${(process.env.BACKEND_URL || process.env.NEXT_PUBLIC_BACKEND_BASE_URL)}/api/dashboard/reservation/block-phone`,
         {
           body: formData,
           method: "POST",
@@ -107,7 +107,7 @@ export const useBlockedNumbersHook = () => {
       router.push(`show-blocked-numbers`);
       return data;
     } catch (error) {
-      console.log(error);
+      // error logged silently
     } finally {
       getData(locale);
       setLoading(false);

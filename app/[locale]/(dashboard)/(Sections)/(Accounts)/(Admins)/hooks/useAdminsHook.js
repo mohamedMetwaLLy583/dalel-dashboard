@@ -3,6 +3,7 @@ import { useRouter } from "next/navigation";
 import { useEffect } from "react";
 import { useState } from "react";
 import { toast } from "react-toastify";
+import { useToken } from "@/provider/auth.provider";
 
 export const useAdminsHook = () => {
   const [data, setData] = useState(null);
@@ -10,7 +11,7 @@ export const useAdminsHook = () => {
   const [roles, setRoles] = useState(null);
   const [loading, setLoading] = useState(false);
   const [deletingId, setDeletingId] = useState(null);
-  const token = localStorage.getItem("token");
+  const token = useToken();
 
   const t = useTranslations();
   const locale = t("locale");
@@ -21,13 +22,12 @@ export const useAdminsHook = () => {
     setLoading(true);
     try {
       const res = await fetch(
-        `${process.env.NEXT_PUBLIC_BACKEND_BASE_URL}/api/dashboard/admin`,
+        `${(process.env.BACKEND_URL || process.env.NEXT_PUBLIC_BACKEND_BASE_URL)}/api/dashboard/admin`,
         {
           next: { revalidate: 0 },
           headers: {
             "Accept-Language": t("locale"),
             Authorization: `Bearer ${token}`,
-            "ngrok-skip-browser-warning": "skip-browser-warning",
             Accept: "application/json",
           },
         }
@@ -58,7 +58,7 @@ export const useAdminsHook = () => {
     setLoading(true);
     try {
       const res = await fetch(
-        `${process.env.NEXT_PUBLIC_BACKEND_BASE_URL}/api/dashboard/admin/${id}`,
+        `${(process.env.BACKEND_URL || process.env.NEXT_PUBLIC_BACKEND_BASE_URL)}/api/dashboard/admin/${id}`,
         {
           next: { revalidate: 0 },
           headers: {
@@ -93,7 +93,7 @@ export const useAdminsHook = () => {
     setLoading(true);
     try {
       const res = await fetch(
-        `${process.env.NEXT_PUBLIC_BACKEND_BASE_URL}/api/dashboard/roles`,
+        `${(process.env.BACKEND_URL || process.env.NEXT_PUBLIC_BACKEND_BASE_URL)}/api/dashboard/roles`,
         {
           headers: {
             Authorization: `Bearer ${token}`,
@@ -142,13 +142,12 @@ export const useAdminsHook = () => {
     try {
       setLoading(true);
       const res = await fetch(
-        `${process.env.NEXT_PUBLIC_BACKEND_BASE_URL}/api/dashboard/admin`,
+        `${(process.env.BACKEND_URL || process.env.NEXT_PUBLIC_BACKEND_BASE_URL)}/api/dashboard/admin`,
         {
           body: formData,
           method: "POST",
           headers: {
             Authorization: `Bearer ${token}`,
-            "ngrok-skip-browser-warning": "skip-browser-warning",
           },
         }
       );
@@ -187,13 +186,12 @@ export const useAdminsHook = () => {
     try {
       setLoading(true);
       const res = await fetch(
-        `${process.env.NEXT_PUBLIC_BACKEND_BASE_URL}/api/dashboard/admin/${id}`,
+        `${(process.env.BACKEND_URL || process.env.NEXT_PUBLIC_BACKEND_BASE_URL)}/api/dashboard/admin/${id}`,
         {
           body: formData,
           method: "POST",
           headers: {
             Authorization: `Bearer ${token}`,
-            "ngrok-skip-browser-warning": "skip-browser-warning",
             Accept: "application/json",
           },
           next: { revalidate: 0 },
@@ -230,12 +228,11 @@ export const useAdminsHook = () => {
     setDeletingId(id);
     try {
       const res = await fetch(
-        `${process.env.NEXT_PUBLIC_BACKEND_BASE_URL}/api/dashboard/admin/${id}`,
+        `${(process.env.BACKEND_URL || process.env.NEXT_PUBLIC_BACKEND_BASE_URL)}/api/dashboard/admin/${id}`,
         {
           method: "DELETE",
           headers: {
             Authorization: `Bearer ${token}`,
-            "ngrok-skip-browser-warning": "skip-browser-warning",
           },
         }
       );
@@ -248,7 +245,6 @@ export const useAdminsHook = () => {
         });
       }
     } catch (error) {
-      console.error("Deletion failed:", error);
       toast.error(error, {
         position: "top-right",
         autoClose: 3000,

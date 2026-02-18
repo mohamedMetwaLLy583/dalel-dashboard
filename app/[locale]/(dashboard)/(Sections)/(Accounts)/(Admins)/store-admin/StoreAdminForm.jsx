@@ -76,7 +76,6 @@ export default function StoreAdminForm() {
 
   const onSubmit = (values) => {
     storeData(values);
-    // console.log(values);
   };
 
   return (

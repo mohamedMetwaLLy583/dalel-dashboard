@@ -3,11 +3,12 @@ import { useRouter } from "next/navigation";
 import { useEffect } from "react";
 import { useState } from "react";
 import { toast } from "react-toastify";
+import { useToken } from "@/provider/auth.provider";
 
 export const useStatisticsHook = () => {
   const [data, setData] = useState(null);
   const [loading, setLoading] = useState(false);
-  const token = localStorage.getItem("token");
+  const token = useToken();
 
   const t = useTranslations();
   const locale = t("locale");
@@ -17,7 +18,7 @@ export const useStatisticsHook = () => {
     setLoading(true);
     try {
       const res = await fetch(
-        `${process.env.NEXT_PUBLIC_BACKEND_BASE_URL}/api/dashboard/statistics`,
+        `${(process.env.BACKEND_URL || process.env.NEXT_PUBLIC_BACKEND_BASE_URL)}/api/dashboard/statistics`,
         {
           next: { revalidate: 0 },
           headers: {
@@ -35,7 +36,6 @@ export const useStatisticsHook = () => {
 
       setData(data.data);
     } catch (error) {
-      console.log(error);
     } finally {
       setLoading(false);
     }
@@ -56,7 +56,7 @@ export const useStatisticsHook = () => {
     try {
       setLoading(true);
       const res = await fetch(
-        `${process.env.NEXT_PUBLIC_BACKEND_BASE_URL}/api/dashboard/statistics`,
+        `${(process.env.BACKEND_URL || process.env.NEXT_PUBLIC_BACKEND_BASE_URL)}/api/dashboard/statistics`,
         {
           body: formData,
           method: "POST",
@@ -75,7 +75,6 @@ export const useStatisticsHook = () => {
       const data = await res.json();
       return data;
     } catch (error) {
-      console.log(error);
     } finally {
       getData(locale);
       setLoading(false);

@@ -5,7 +5,6 @@ import { redirect } from "next/navigation";
 
 const layout = async ({ children, params: { locale } }) => {
   const session = await getServerSession(authOptions);
-  // console.log(session.roles[0].permissions);
   if (!session?.user?.email) {
     redirect(`/${locale}/auth/login`);
   }

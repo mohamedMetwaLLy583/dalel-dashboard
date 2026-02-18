@@ -3,13 +3,14 @@ import { useRouter } from "next/navigation";
 import { useEffect } from "react";
 import { useState } from "react";
 import { toast } from "react-toastify";
+import { useToken } from "@/provider/auth.provider";
 
 export const useChooseUsHook = () => {
   const [data, setData] = useState(null);
   const [currentData, setCurrentData] = useState(null);
   const [loading, setLoading] = useState(false);
   const [deletingId, setDeletingId] = useState(null);
-  const token = localStorage.getItem("token");
+  const token = useToken();
 
   const t = useTranslations();
   const locale = t("locale");
@@ -20,7 +21,7 @@ export const useChooseUsHook = () => {
     setLoading(true);
     try {
       const res = await fetch(
-        `${process.env.NEXT_PUBLIC_BACKEND_BASE_URL}/api/dashboard/choose-us`,
+        `${(process.env.BACKEND_URL || process.env.NEXT_PUBLIC_BACKEND_BASE_URL)}/api/dashboard/choose-us`,
         {
           next: { revalidate: 0 },
           headers: {
@@ -38,7 +39,6 @@ export const useChooseUsHook = () => {
 
       setData(data.data);
     } catch (error) {
-      console.log(error);
     } finally {
       setLoading(false);
     }
@@ -49,7 +49,7 @@ export const useChooseUsHook = () => {
     setLoading(true);
     try {
       const res = await fetch(
-        `${process.env.NEXT_PUBLIC_BACKEND_BASE_URL}/api/dashboard/choose-us/${id}`,
+        `${(process.env.BACKEND_URL || process.env.NEXT_PUBLIC_BACKEND_BASE_URL)}/api/dashboard/choose-us/${id}`,
         {
           next: { revalidate: 0 },
           headers: {
@@ -67,7 +67,6 @@ export const useChooseUsHook = () => {
 
       setCurrentData(data.data);
     } catch (error) {
-      console.log(error);
     } finally {
       setLoading(false);
     }
@@ -85,7 +84,7 @@ export const useChooseUsHook = () => {
     try {
       setLoading(true);
       const res = await fetch(
-        `${process.env.NEXT_PUBLIC_BACKEND_BASE_URL}/api/dashboard/choose-us`,
+        `${(process.env.BACKEND_URL || process.env.NEXT_PUBLIC_BACKEND_BASE_URL)}/api/dashboard/choose-us`,
         {
           body: formData,
           method: "POST",
@@ -102,7 +101,6 @@ export const useChooseUsHook = () => {
       router.push(`show-choose-us`);
       return data;
     } catch (error) {
-      console.log(error);
     } finally {
       getData(locale);
       setLoading(false);
@@ -120,7 +118,7 @@ export const useChooseUsHook = () => {
     try {
       setLoading(true);
       const res = await fetch(
-        `${process.env.NEXT_PUBLIC_BACKEND_BASE_URL}/api/dashboard/choose-us/${id}`,
+        `${(process.env.BACKEND_URL || process.env.NEXT_PUBLIC_BACKEND_BASE_URL)}/api/dashboard/choose-us/${id}`,
         {
           body: formData,
           method: "POST",
@@ -139,7 +137,6 @@ export const useChooseUsHook = () => {
       const data = await res.json();
       return data;
     } catch (error) {
-      console.log(error);
     } finally {
       getData(locale);
       setLoading(false);
@@ -151,7 +148,7 @@ export const useChooseUsHook = () => {
     setDeletingId(id);
     try {
       const res = await fetch(
-        `${process.env.NEXT_PUBLIC_BACKEND_BASE_URL}/api/dashboard/choose-us/${id}`,
+        `${(process.env.BACKEND_URL || process.env.NEXT_PUBLIC_BACKEND_BASE_URL)}/api/dashboard/choose-us/${id}`,
         {
           method: "DELETE",
           headers: { authorization: `Bearer ${token}` },
@@ -166,7 +163,6 @@ export const useChooseUsHook = () => {
         });
       }
     } catch (error) {
-      console.error("Deletion failed:", error);
     } finally {
       setDeletingId(null);
     }

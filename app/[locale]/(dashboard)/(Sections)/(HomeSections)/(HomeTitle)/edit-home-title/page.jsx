@@ -24,7 +24,6 @@ export default function Home() {
   const { data, EditData, loading } = useHomeTitleHook();
 
   const onSubmit = (values) => {
-    // console.log(values);
     EditData(values);
   };
 

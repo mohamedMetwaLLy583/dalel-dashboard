@@ -8,6 +8,7 @@ import { useForm } from "react-hook-form";
 import { useTranslations } from "next-intl";
 import { useRouter } from "next/navigation";
 import { ToastContainer, toast } from "react-toastify";
+import { useToken } from "@/provider/auth.provider";
 
 import "react-toastify/dist/ReactToastify.css";
 
@@ -21,19 +22,18 @@ const PersonalDetails = () => {
 
   const [loading, setLoading] = useState(true);
   const t = useTranslations();
+  const token = useToken();
 
   const router = useRouter();
 
   useEffect(() => {
     const fetchProfileData = async () => {
       try {
-        const token = localStorage.getItem("token");
         const response = await fetch(
-          `${process.env.NEXT_PUBLIC_BACKEND_BASE_URL}/api/dashboard/profile`,
+          `${(process.env.BACKEND_URL || process.env.NEXT_PUBLIC_BACKEND_BASE_URL)}/api/dashboard/profile`,
           {
             headers: {
               Authorization: `Bearer ${token}`,
-              "ngrok-skip-browser-warning": "skip-browser-warning",
             },
           }
         );
@@ -44,7 +44,6 @@ const PersonalDetails = () => {
           email: data.data.email,
         });
       } catch (error) {
-        console.log(error);
       } finally {
         setLoading(false);
       }
@@ -54,16 +53,14 @@ const PersonalDetails = () => {
   }, [reset]);
 
   const onSubmit = async (values) => {
-    const token = localStorage.getItem("token");
     try {
       const response = await fetch(
-        `${process.env.NEXT_PUBLIC_BACKEND_BASE_URL}/api/dashboard/change-info`,
+        `${(process.env.BACKEND_URL || process.env.NEXT_PUBLIC_BACKEND_BASE_URL)}/api/dashboard/change-info`,
         {
           method: "POST",
           headers: {
             "Content-Type": "application/json",
             Authorization: `Bearer ${token}`,
-            "ngrok-skip-browser-warning": "skip-browser-warning",
             Accept: "application/json",
           },
           body: JSON.stringify(values),
@@ -82,7 +79,6 @@ const PersonalDetails = () => {
         });
       }
     } catch (error) {
-      console.error("Error submitting form:", error);
     }
   };
 
